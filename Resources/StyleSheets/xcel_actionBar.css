@@ -1,0 +1,218 @@
+#cssmenu {
+  padding: 0;
+  margin: 0 0 0 0;
+  border: 0;
+}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu ul {
+  position: relative;
+  z-index: 597;
+  float: left;
+}
+#cssmenu ul.is-sub li{
+	float: left;/*alida*/
+	min-height: 1px;
+  	line-height: 1em;
+  	vertical-align: middle;
+}	
+#cssmenu ul li {
+ 
+  
+}
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+#cssmenu ul ul.is-sub li {
+  float: none;/*alida*/
+}
+
+#cssmenu ul ul ul {
+  top: 1px;
+  left: 99%;
+}
+#cssmenu ul li:hover > ul {
+  visibility: visible;
+}
+#cssmenu ul ul {
+  top: 1px;
+  left: 99%;
+}
+/*
+#cssmenu ul li {
+  float: none;
+}*/
+#cssmenu ul ul {
+  margin-top: 1px;
+}
+#cssmenu ul ul li {
+  font-weight: normal;
+}
+/* Custom CSS Styles */
+
+#cssmenu:after,
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu a {
+  color: #333333;
+  display: inline-block;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+  font-size: 12px;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+}
+#cssmenu a:hover {
+  background: #f6f6f6;
+  /*border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;*/
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+}
+#cssmenu ul {
+  background: #e5e5e5;
+ /* border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;*/
+  list-style: none;
+}
+#cssmenu > ul {
+  height: 30px;
+  background: -moz-linear-gradient(top, #e5e5e5 0%, #dddddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e5e5e5), color-stop(100%, #dddddd));
+  background: -webkit-linear-gradient(top, #e5e5e5 0%, #dddddd 100%);
+  background: -o-linear-gradient(top, #e5e5e5 0%, #dddddd 100%);
+  background: -ms-linear-gradient(top, #e5e5e5 0%, #dddddd 100%);
+  background: linear-gradient(#e5e5e5 0%, #dddddd 100%);
+/*  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3);*/
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+#cssmenu > ul > li {
+  float: left;
+  padding: 0 0px;
+  position: relative;
+}
+#cssmenu > ul > li:hover > a {
+  background: #f6f6f6;
+  /*border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;*/
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+#cssmenu > ul > li a {
+  line-height: 30px;
+}
+#cssmenu > ul > li a:hover {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+#cssmenu .has-sub:hover ul {
+  display: block;
+}
+#cssmenu .has-sub a {
+  display: block;
+  position: relative;
+}
+#cssmenu .has-sub > a:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 9px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -5px;
+  -webkit-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+#cssmenu .has-sub ul {
+  background: #f6f6f6;
+  border: 1px solid #dddddd;
+/*  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;*/
+  display: none;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 29px;
+  width: 130px;
+  z-index: 1;
+}
+#cssmenu .has-sub ul li:hover > a {
+  background: #dddddd;
+  color: #ae0001;
+  border-color: #e5e5e5 transparent transparent transparent;
+}
+#cssmenu .has-sub ul a {
+  line-height: 160%;
+  padding: 7px 0px;
+}
+
+#cssmenu .has-sub .has-sub ul.is-sub{
+  left: 100%;
+  top: -1px;
+  margin-left: 0;	
+}
+/*this is used for the last list item that holds links that did not fit in the menu initially*/
+#cssmenu .extraButton  .has-sub ul.is-sub{
+  left: -100%;
+  top: -1px;
+  margin-left: 0;	
+}			
+#cssmenu .extraButton ul.is-sub {
+	left: -120%;
+}	
+
+.gbma{
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #b9b9b9;
+	border-width: 5px 4px 0;
+	left: 4px;
+	position: relative;
+}
+
+ul.is-sub .gbma{
+	display: inline-block;
+	left: 4px;
+	position: relative;	
+	width: 0; 
+	height: 0; 
+	border-top: 4px dashed transparent;
+	border-bottom: 4px solid transparent;	
+	border-left: 4px solid #b9b9b9;	
+}

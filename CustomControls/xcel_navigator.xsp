@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex"
+xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<H1>Forms</H1>
+	<xp:panel
+		themeId="containerNavigator">
+		<xe:navigator
+			themeId="navigator">
+		<xe:this.treeNodes>
+			<xe:repeatTreeNode var="val">
+				<xe:this.children>
+					<xe:basicLeafNode>
+						<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+						<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+					</xe:basicLeafNode>
+				</xe:this.children>
+				<xe:this.value><![CDATA[#{javascript:
+					if (sessionScope.allForms != null){
+				 		return sessionScope.allForms;
+				 	}
+				 	var forms = database.getForms().iterator();
+				 	var allArray = new Array();
+				 		
+					while (forms.hasNext()) {
+						var formsArray = new Array();
+						var form:NotesForm = forms.next();
+						if (form.isSubForm() == false){
+							formsArray.push(form.getName());
+							var currentForm = form.getName();
+							if (currentForm.indexOf("/") != -1){
+								currentForm = currentForm.substring(currentForm.lastIndexOf("/") +1);
+							}
+							if (currentForm.indexOf("\\") != -1){
+								currentForm = currentForm.substring(currentForm.lastIndexOf("\\") +1);
+							}
+							var urlStr = getConvertedElement("form", currentForm) + ".xsp";
+							
+							//formsArray.push(getConvertedElement("form", currentForm) + ".xsp");
+							if (urlStr == "undefined.xsp"){
+								var iterator:java.util.Iterator = form.getAliases().iterator();
+								while (iterator.hasNext()) {
+									urlStr = getConvertedElement("form", iterator.next()) + ".xsp";
+								}
+								if (urlStr == "undefined.xsp"){
+									urlStr = "xcel_undefined.xsp";
+								}
+							}
+							
+							formsArray.push(urlStr);
+							requestScope.status += "\n" + form.getName();
+							allArray.push(formsArray);
+						}
+					}
+					sessionScope.allForms = allArray;
+					return sessionScope.allForms;
+				}]]>
+
+				</xe:this.value>
+			</xe:repeatTreeNode>
+		</xe:this.treeNodes>
+	</xe:navigator></xp:panel>
+
+
+	<H1>Views </H1>
+	<xp:panel
+		themeId="containerNavigator">
+		<xe:navigator
+			themeId="navigator">
+		<xe:this.treeNodes>
+			<xe:repeatTreeNode var="val">
+				<xe:this.children>
+					<xe:basicLeafNode>
+						<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+						<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+					</xe:basicLeafNode>
+				</xe:this.children>
+				<xe:this.value><![CDATA[#{javascript:
+					if (sessionScope.allViews != null){
+				 		return sessionScope.allViews;
+				 	}
+				 	
+				 	
+				 	var views = database.getViews().iterator();
+				 	
+				 	var allArray = new Array();
+					while (views.hasNext()) {
+						var viewsArray = new Array();
+						var view:NotesView = views.next();
+						if (view.getName() != ""){
+							if (view.getName().substring(0,1) == "(" && view.getName().substring(view.getName().length-1, view.getName().length) && view.getAliases().length == 0){
+								//is hidden view with no alias
+								viewsArray.push(view.getName() );
+							}else{
+								viewsArray.push(view.getName());
+							}
+							
+
+							viewsArray.push("xcel_viewDisplayDynamicLayout.xsp?vw="+view.getName());
+							allArray.push(viewsArray);
+							
+						}
+					}
+					sessionScope.allViews = allArray;
+					return sessionScope.allViews;
+				}]]>
+
+				</xe:this.value>
+			</xe:repeatTreeNode>
+		</xe:this.treeNodes>		
+	</xe:navigator></xp:panel>
+
+
+	<H1>Pages </H1>
+	<xp:panel themeId="containerNavigator">
+		<xe:navigator themeId="navigator">
+		<xe:this.treeNodes>
+			<xe:repeatTreeNode var="val">
+				<xe:this.children>
+					<xe:basicLeafNode>
+						<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+						<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+					</xe:basicLeafNode>
+				</xe:this.children>
+				<xe:this.value><![CDATA[#{javascript:					
+					if (sessionScope.allPageElements != null){
+				 		return sessionScope.allPageElements;
+				 	}
+				 	
+				 	var pageCollection:NotesNoteCollection = database.createNoteCollection(false);
+				 	var allArray = new Array();					
+					
+					pageCollection.setSelectPages(true);
+					pageCollection.buildCollection();
+					var id:string = pageCollection.getFirstNoteID();
+					
+						while (id.length() > 0) {
+							var tmpid = pageCollection.getNextNoteID(id);
+							var doc:NotesDocument = database.getDocumentByID(id);
+							var pageName:string = doc.getItemValueString("$Title");
+							
+							if (pageName != ""){
+								var pagesArray = new Array();
+								print (pageName);
+								print (getConvertedElement("page",pageName) + ".xsp");
+								pagesArray.push(pageName);
+								pagesArray.push(getConvertedElement("page",pageName) + ".xsp");
+								requestScope.status += "\n" + pageName;
+								allArray.push(pagesArray);
+							}
+							id = tmpid;
+						}
+				 	
+					
+					sessionScope.allPageElements = allArray;
+					return sessionScope.allPageElements;
+				}]]>
+
+				</xe:this.value>
+			</xe:repeatTreeNode>
+		</xe:this.treeNodes>		
+	</xe:navigator></xp:panel>
+
+	<br/><br/>
+	<br/><br/>
+
+</xp:view>

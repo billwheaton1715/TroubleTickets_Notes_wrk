@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+	<faces-config-extension>
+		<namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+		<default-prefix>xc</default-prefix>
+	</faces-config-extension>
+	<composite-component>
+		<display-name>Outline: outline</display-name>
+		<component-type>ccoutline_outline</component-type>
+		<composite-name>ccoutline_outline</composite-name>
+		<composite-file>/ccoutline_outline.xsp</composite-file>
+		<composite-extension>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>Xcelerator Outlines</category>
+			</designer-extension>
+		</composite-extension>
+		<description>Xcelerator. Outline: outline</description>
+		<icon>
+		<small-icon>icons/customcontrols/outline.png</small-icon>
+		<large-icon>icons/customcontrols/outline.png</large-icon>
+		</icon>
+	</composite-component>
+</faces-config>

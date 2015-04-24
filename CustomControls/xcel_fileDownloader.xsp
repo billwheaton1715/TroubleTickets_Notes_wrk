@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" dojoTheme="true">
+	<xp:div>
+		<a href="#{compositeData.filePath}">
+			<table style="table-layout:no">
+				<tr>
+					<td><img height="#{compositeData.hieght}" width="#{compositeData.width}" src="#{compositeData.imagePath}" /></td>
+				</tr>
+				<tr>
+					<td>
+						<xp:text value="#{compositeData.displayName}"></xp:text>
+					</td>
+				</tr>
+			</table>
+		</a>
+	</xp:div>
+</xp:view>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+GBS Xcelerator 
+Copyright 
+Under the copyright laws, neither this documentation nor the software may be copied, photocopied, reproduced, translated, reverse engineered or reduced to any electronic medium or machine-readable form, in whole or in part, without the prior written consent of Group Business Software Corp. (GBS), except in the manner described in the documentation.
+Copyright ©1997-2013
+Group Business Software Corporation
+69 Hickory Dr.
+Waltham, MA 02451, USA
+All Rights Reserved.
+Permessa, Permessa Control!, Permessa Collaboration Control!, Permessa Collaboration Investigator, Permessa Usage Tracker, Permessa Email Control!, Permessa Email Investigator, Permessa Email Policy Enforcer, Permessa Email Reporter, Permessa IM Control!, Permessa IM Archiver, Permessa IM Enforcer Permessa IM Investigator, Permessa IM Monitor, Permessa Replication Control!, Permessa Application Tracker, Permessa Replication Investigator, Permessa Replication Reporter, Transformer Investigator, Transformer Analyzer and the Permessa logo are trademarks of Permessa Corporation.
+GBS Xcelerator, GBS Insights, GBS Insights Investigator, Group Business Software and the GBS logo are trademarks of GBS.
+AIX, IBM, Lotus, Lotus Notes, Domino, Sametime and Tivoli are trademarks or registered trademarks of Lotus Development Corporation and/or IBM Corporation in the United States, other countries, or both.
+Microsoft, Windows, Microsoft Exchange, Microsoft Exchange Server, and Windows NT are registered trademarks and SQL Server is a trademark of Microsoft Corporation in the United States and/or other countries.
+Solaris and Java are trademarks or registered trademarks of Oracle.
+All other brand and product names are the registered trademarks or trademarks of their respective owners.
+-->
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>xcel_embeddedDatePicker</component-type>
+    <composite-name>xcel_embeddedDatePicker</composite-name>
+    <composite-file>/xcel_embeddedDatePicker.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <category>Dojo UI</category>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xd;
+&lt;xp:view&#xd;
+	xmlns:xp="http://www.ibm.com/xsp/core"&gt;&#xd;
+&#xd;
+	&lt;xp:div style="border:2px solid #333;"&gt;&#xd;
+&#xd;
+		&lt;xp:div style="background-color: #fff; padding: 4px;"&gt;&#xd;
+			&lt;xp:callback&#xd;
+				facetName="body"&gt;&#xd;
+			&lt;/xp:callback&gt;&#xd;
+		&lt;/xp:div&gt;&#xd;
+	&lt;/xp:div&gt;&#xd;
+&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>closable</property-name>
+      <property-class>string</property-class>
+      <display-name>closable</display-name>
+      <description>Parameter for children of dijit.layout.StackContainer or subclasses. True if user can close (destroy) this child, such as (for example) clicking the X on the tab.</description>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>doLayout</property-name>
+      <property-class>string</property-class>
+      <display-name>doLayout</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+      <description>false - don't adjust size of children - true - if there is a single visible child widget, set it's size to however big the ContentPane is</description>
+    </property>
+    <property>
+      <property-name>dragRestriction</property-name>
+      <property-class>string</property-class>
+      <display-name>dragRestriction</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+      <description>If true, the widget can not be draggable. Defined only if dojo.require("dojox.layout.GridContainerLite") is done.</description>
+    </property>
+    <property>
+      <property-name>errorMessage</property-name>
+      <property-class>string</property-class>
+      <display-name>errorMessage</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.std.String</editor>
+        </designer-extension>
+      </property-extension>
+      <description>Message that shows if an error occurs</description>
+    </property>
+    <property>
+      <property-name>extractContent</property-name>
+      <property-class>string</property-class>
+      <display-name>extractContent</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+      <description>Extract visible content from inside of &lt;body&gt; .... &lt;/body&gt;. I.e., strip &lt;html&gt; and &lt;head&gt; (and it's contents) from the href</description>
+    </property>
+    <property>
+      <property-name>href</property-name>
+      <property-class>string</property-class>
+      <display-name>href</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.std.String</editor>
+        </designer-extension>
+      </property-extension>
+      <description>The href of the content that displays now. Set this at construction if you want to load data externally when the pane is shown. (Set preload=true to load it immediately.)</description>
+    </property>
+    <property>
+      <property-name>loadingMessage</property-name>
+      <property-class>string</property-class>
+      <display-name>loadingMessage</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.std.String</editor>
+        </designer-extension>
+      </property-extension>
+      <description>Message that shows while downloading</description>
+    </property>
+    <property>
+      <property-name>open</property-name>
+      <property-class>string</property-class>
+      <display-name>open</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+      <description>Whether pane is opened or closed.</description>
+    </property>
+    <property>
+      <property-name>parseOnLoad</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+      <display-name>parseOnLoad</display-name>
+      <description>Parse content and create the widgets, if any.</description>
+    </property>
+    <property>
+      <property-name>preload</property-name>
+      <property-class>string</property-class>
+      <display-name>preload</display-name>
+      <description>Force load of data on initialization even if pane is hidden.</description>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>title</property-name>
+      <property-class>string</property-class>
+      <display-name>Title</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.std.String</editor>
+        </designer-extension>
+      </property-extension>
+      <description>HTML title attribute. For form widgets this specifies a tooltip to display when hovering over the widget (just like the native HTML title attribute).</description>
+    </property>
+    <property>
+      <property-name>toggleable</property-name>
+      <property-class>string</property-class>
+      <display-name>toggleable</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>true&#xd;
+false</editor-parameter>
+        </designer-extension>
+      </property-extension>
+      <description>Whether pane can be opened or closed by clicking the title bar.</description>
+    </property>
+  </composite-component>
+</faces-config>

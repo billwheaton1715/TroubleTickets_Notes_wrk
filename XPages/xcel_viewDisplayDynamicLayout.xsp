@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xp:this.resources>
+		<xp:script src="/xcel_ElementNameMap.jss" clientSide="false" />
+		<xp:script src="/xcel_ssjs_DynamicViewCtrl.jss" clientSide="false" />
+	</xp:this.resources>
+	<xp:this.beforePageLoad><![CDATA[#{javascript:
+			//used to get layout properties
+			getViewNameScope();
+	}]]></xp:this.beforePageLoad>
+
+	<xc:xcel_cc_layout>
+		<xp:this.facets>
+			<xp:panel xp:key="headline">
+				<xc:xcel_cc_commonHeader />
+			</xp:panel>
+			<xp:panel xp:key="navigation">
+				<xc:xcel_navigator />
+			</xp:panel>
+			<xp:panel xp:key="content">
+				<xc:xcel_cc_form>
+					<xp:this.facets>
+						<xp:panel xp:key="top">
+							<xp:include id="include1">
+								<xp:this.pageName><![CDATA[${javascript:
+							
+					var selectedView = unescape(sessionScope.selectedView);
+					
+					
+					
+					return getConvertedActionbar("view", selectedView)+ ".xsp";
+					}]]>
+								</xp:this.pageName>
+							</xp:include>
+						</xp:panel>
+						<xp:panel xp:key="center">
+
+										<xp:include id="include2">
+											<xp:this.pageName><![CDATA[${javascript:
+					var selectedView = unescape(sessionScope.selectedView);
+					
+					
+					
+					return getConvertedElement("view", selectedView)+".xsp";
+					}]]>
+											</xp:this.pageName>
+										</xp:include>
+
+						</xp:panel>
+					</xp:this.facets>
+				</xc:xcel_cc_form>
+			</xp:panel>
+			<xp:panel xp:key="preview" />
+			<xp:panel xp:key="legal">
+				<xc:xcel_cc_commonFooter />
+			</xp:panel>
+		</xp:this.facets>
+	</xc:xcel_cc_layout>
+</xp:view>

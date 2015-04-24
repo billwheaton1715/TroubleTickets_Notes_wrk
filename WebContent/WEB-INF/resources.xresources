@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<acc:AcceleratorResources xmlns:acc="gbs.com/accelerator/configuration" convertAll="false">
+  <resources noteid="1aa" path="Forms/ticket.form"/>
+</acc:AcceleratorResources>

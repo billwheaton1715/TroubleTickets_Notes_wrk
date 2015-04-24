@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xp:div styleClass="navbar">
+		<xp:div styleClass="navbar-inner">
+			<xp:link escape="true" text="#{javascript:@DbTitle()}" id="link1" styleClass="brand"
+				value="#">
+			</xp:link>
+			<xp:panel styleClass="nav" tagName="ul">
+				<xp:this.attrs>
+					<xp:attr name="role" value="navigation"></xp:attr>
+				</xp:this.attrs>
+				<xp:panel styleClass="active" tagName="li">
+					<xp:link escape="true" text="Single Action" id="link3"
+						value="#">
+					</xp:link>
+				</xp:panel>
+				<xp:panel styleClass="dropdown" tagName="li">					
+					<xp:panel id="drop1" tagName="a"
+						styleClass="dropdown-toggle">
+						<xp:this.attrs>
+							<xp:attr name="href" value="#"></xp:attr>
+							<xp:attr name="role" value="button"></xp:attr>
+							<xp:attr name="data-toggle" value="dropdown"></xp:attr>		
+						</xp:this.attrs>
+						Dropdown Actions
+						<b class='caret'></b>		
+					</xp:panel>
+					<xp:panel styleClass="dropdown-menu" tagName="ul">
+						<xp:this.attrs>
+							<xp:attr name="role" value="menu"></xp:attr>
+							<xp:attr name="aria-labelledby" value="drop1"></xp:attr>
+						</xp:this.attrs>
+						<xp:panel  tagName="li">			
+							<xp:this.attrs>
+								<xp:attr name="role" value="mpresentationenu"></xp:attr>
+							</xp:this.attrs>
+							<xp:link escape="true" text="Action1" id="link4" styleClass="dropdown-toggle" value="#">		
+								<xp:this.attrs>
+									<xp:attr name="role" value="menuitem"></xp:attr>
+									<xp:attr name="tabindex" value="-1"></xp:attr>
+								</xp:this.attrs>
+							</xp:link>
+						</xp:panel>
+						<xp:panel styleClass="divider">
+								<xp:this.attrs>
+									<xp:attr name="role" value="presentation"></xp:attr>
+								</xp:this.attrs>						
+						</xp:panel>
+						<xp:panel  tagName="li">			
+							<xp:this.attrs>
+								<xp:attr name="role" value="mpresentationenu"></xp:attr>
+							</xp:this.attrs>
+							<xp:link escape="true" text="Action2" id="link5" styleClass="dropdown-toggle" value="#">		
+								<xp:this.attrs>
+									<xp:attr name="role" value="menuitem"></xp:attr>
+									<xp:attr name="tabindex" value="-1"></xp:attr>
+								</xp:this.attrs>
+							</xp:link>
+						</xp:panel>		
+						<xp:panel  tagName="li">			
+							<xp:this.attrs>
+								<xp:attr name="role" value="mpresentationenu"></xp:attr>
+							</xp:this.attrs>
+							<xp:link escape="true" text="Action3" id="link2" styleClass="dropdown-toggle" value="#">		
+								<xp:this.attrs>
+									<xp:attr name="role" value="menuitem"></xp:attr>
+									<xp:attr name="tabindex" value="-1"></xp:attr>
+								</xp:this.attrs>
+							</xp:link>
+						</xp:panel>												
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+		</xp:div>
+	</xp:div>
+</xp:view>

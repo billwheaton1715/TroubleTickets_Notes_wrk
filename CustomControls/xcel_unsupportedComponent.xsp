@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/xcel_unsupportedComponentStyle.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:div styleClass="#{javascript:if (compositeData.severity == 'Info'){
+			return 'green';
+		}else if (compositeData.severity == 'Warning'){
+			return 'yellow';
+		}else if (compositeData.severity == 'Error'){
+			return 'red';
+		}}">
+		<xp:callback facetName="body"></xp:callback>
+	</xp:div>
+
+
+</xp:view>

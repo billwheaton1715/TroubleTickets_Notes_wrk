@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+GBS Xcelerator 
+Copyright 
+Under the copyright laws, neither this documentation nor the software may be copied, photocopied, reproduced, translated, reverse engineered or reduced to any electronic medium or machine-readable form, in whole or in part, without the prior written consent of Group Business Software Corp. (GBS), except in the manner described in the documentation.
+Copyright ©1997-2013
+Group Business Software Corporation
+69 Hickory Dr.
+Waltham, MA 02451, USA
+All Rights Reserved.
+Permessa, Permessa Control!, Permessa Collaboration Control!, Permessa Collaboration Investigator, Permessa Usage Tracker, Permessa Email Control!, Permessa Email Investigator, Permessa Email Policy Enforcer, Permessa Email Reporter, Permessa IM Control!, Permessa IM Archiver, Permessa IM Enforcer Permessa IM Investigator, Permessa IM Monitor, Permessa Replication Control!, Permessa Application Tracker, Permessa Replication Investigator, Permessa Replication Reporter, Transformer Investigator, Transformer Analyzer and the Permessa logo are trademarks of Permessa Corporation.
+GBS Xcelerator, GBS Insights, GBS Insights Investigator, Group Business Software and the GBS logo are trademarks of GBS.
+AIX, IBM, Lotus, Lotus Notes, Domino, Sametime and Tivoli are trademarks or registered trademarks of Lotus Development Corporation and/or IBM Corporation in the United States, other countries, or both.
+Microsoft, Windows, Microsoft Exchange, Microsoft Exchange Server, and Windows NT are registered trademarks and SQL Server is a trademark of Microsoft Corporation in the United States and/or other countries.
+Solaris and Java are trademarks or registered trademarks of Oracle.
+All other brand and product names are the registered trademarks or trademarks of their respective owners.
+-->
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>xcel_navigator_top</component-type>
+    <composite-name>xcel_navigator_top</composite-name>
+    <composite-file>/xcel_navigator_top.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+      </designer-extension>
+    </composite-extension>
+  </composite-component>
+</faces-config>

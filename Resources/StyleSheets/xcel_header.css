@@ -1,0 +1,44 @@
+ul.header {
+	float: right;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li.header {
+	float: left;
+	padding-right:15px;
+}
+
+a.header {
+	font-family: verdana;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+span.header {
+	font-family: verdana;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+a.header:link {
+	text-decoration: none;
+}
+
+a.header:visited {
+	text-decoration: none;
+}
+
+a.header:hover {
+	text-decoration: underline;
+}
+
+ul.header li.header:after {
+	padding: 7px;
+}
+
+.mobileButton{
+	float:left;margin-top:20px;
+}

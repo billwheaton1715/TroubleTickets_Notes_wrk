@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel
+		themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionContainer');}">
+		<xp:panel
+			themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionContent');}">
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionTopContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionTopContent');}">
+					<xp:callback
+						facetName="top" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionCenterContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionCenterContent');}">
+					<xp:callback
+						facetName="center" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionBottomContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formLayoutSection','sectionBottomContent');}">
+					<xp:callback
+						facetName="bottom" />
+				</xp:panel>
+			</xp:panel>
+		</xp:panel>
+	</xp:panel>
+
+</xp:view>

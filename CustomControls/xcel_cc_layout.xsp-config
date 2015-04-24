@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>xcel_cc_layout</component-type>
+    <composite-name>xcel_cc_layout</composite-name>
+    <composite-file>/xcel_cc_layout.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xd;
+&lt;xp:view&#xd;
+	xmlns:xp="http://www.ibm.com/xsp/core"&gt;&#xd;
+&#xd;
+&lt;xp:table style="border-collapse: collapse; border: 2px dashed #ccc; width:100%;"&gt;&#xd;
+	&lt;xp:tr&gt;&#xd;
+		&lt;xp:td colspan="3" style="background-color: #C3D9FF;"&gt;&#xd;
+&lt;h2&gt;Application Layout Control&lt;/h2&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+	&lt;/xp:tr&gt;&#xd;
+	&lt;xp:tr&gt;&#xd;
+		&lt;xp:td colspan="3" style="background-color: #F9F7ED;"&gt;&#xd;
+&lt;xp:callback&#xd;
+	facetName="headline" /&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+	&lt;/xp:tr&gt;&#xd;
+	&lt;xp:tr&gt;&#xd;
+		&lt;xp:td style="background-color: #fff;"&gt;&#xd;
+&lt;xp:callback&#xd;
+	facetName="navigation" /&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+		&lt;xp:td  style="background-color: #fff;"&gt;&#xd;
+&lt;xp:callback&#xd;
+	facetName="content" /&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+		&lt;xp:td  style="background-color: #fff;"&gt;&#xd;
+&lt;xp:callback&#xd;
+	facetName="preview" /&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+	&lt;/xp:tr&gt;&#xd;
+	&lt;xp:tr&gt;&#xd;
+		&lt;xp:td colspan="3" style="background-color: #eee;"&gt;&#xd;
+&lt;xp:callback&#xd;
+	facetName="legal" /&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+	&lt;/xp:tr&gt;&#xd;
+&lt;/xp:table&gt;&#xd;
+&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+    <property-type>
+      <property-name>configuration</property-name>
+      <display-name>configuration</display-name>
+      <property>
+        <property-name>layoutContainer</property-name>
+        <property-class>string</property-class>
+        <display-name>layoutContainer</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.container</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>layoutContent</property-name>
+        <property-class>string</property-class>
+        <display-name>layoutContent</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>layoutRowTop</property-name>
+        <property-class>string</property-class>
+        <display-name>layoutRowTop</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.row
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>topContainer</property-name>
+        <property-class>string</property-class>
+        <display-name>topContainer</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.top.container
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>topContent</property-name>
+        <property-class>string</property-class>
+        <display-name>topContent</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.top.content
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>layoutRowMiddle</property-name>
+        <property-class>string</property-class>
+        <display-name>layoutRowMiddle</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.row
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>leadingContainer</property-name>
+        <property-class>string</property-class>
+        <display-name>leadingContainer</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.leading.container
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>leadingContent</property-name>
+        <property-class>string</property-class>
+        <display-name>leadingContent</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.leading.content
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>centerContainer</property-name>
+        <property-class>string</property-class>
+        <display-name>centerContainer</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.center.container
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>centerContent</property-name>
+        <property-class>string</property-class>
+        <display-name>centerContent</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.center.content
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>trailingContainer</property-name>
+        <property-class>string</property-class>
+        <display-name>trailingContainer</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.trailing.container
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>trailingContent</property-name>
+        <property-class>string</property-class>
+        <display-name>trailingContent</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.trailing.content
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>layoutRowBottom</property-name>
+        <property-class>string</property-class>
+        <display-name>layoutRowBottom</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.row
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>bottomContainer</property-name>
+        <property-class>string</property-class>
+        <display-name>bottomContainer</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.bottom.container
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>bottomContent</property-name>
+        <property-class>string</property-class>
+        <display-name>bottomContent</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+            <default-value>layout.content.bottom.content
+						</default-value>
+          </designer-extension>
+          <required>false</required>
+        </property-extension>
+      </property>
+    </property-type>
+  </composite-component>
+</faces-config>

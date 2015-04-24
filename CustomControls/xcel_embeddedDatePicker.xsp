@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" dojoTheme="true">
+
+	<xp:this.resources>
+	<xp:styleSheet
+			href="http://localhost/xsp/.ibmxspres/dojoroot-1.6.1/dijit/themes/claro/claro.css" />
+		<xp:styleSheet
+			href="http://localhost/xsp/.ibmxspres/dojoroot-1.6.1/dojox/widget/Calendar/Calendar.css">
+		</xp:styleSheet>
+		<xp:dojoModule name="dojox.widget.Calendar" />
+	</xp:this.resources>
+	<xp:div dojoType="dojox.widget.Calendar">
+	</xp:div>
+
+</xp:view>

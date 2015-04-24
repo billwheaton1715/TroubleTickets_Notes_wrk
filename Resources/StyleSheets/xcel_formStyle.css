@@ -1,0 +1,217 @@
+/************************************************Form Table Container Style Start****************************************/
+fieldset.xeformTable{
+	width: 90%;
+	border: 1px solid #ccc;
+	margin: 1em auto;
+	padding: 0;
+}	
+.xeformTable table{
+	border:none;
+}
+.xeformTable td{
+	border:none;
+	padding:5px;
+}
+
+/************************************************Form Table Container Style End******************************************/
+
+/************************************************Standard Table Style Start**********************************************/
+table.standardTable{
+	border-collapse:collapse;
+	margin: 1em auto;
+	width: 90%;
+	border:1px solid #ccc;
+}
+table.standardTable td{
+	border:1px solid #ccc;
+	padding: 0.5em;
+}
+.standardTableHeader{
+	background-color: #f2f2f2;
+}
+
+/************************************************Standard Table Style End************************************************/
+
+
+/************************************************Dijit Tab Container Style Start*****************************************/
+.dijitTabContainer{
+	margin: 1em auto;
+	width: 90%;
+}
+/************************************************Dijit Tab Container Style End*******************************************/
+
+
+
+/***********************************************Dijit Title Pane Style Start*********************************************/
+.dijitTitlePane {
+	width: 90%;
+	margin: 1em auto;
+}
+.xspSection{
+	width: 90%;
+	margin: 1em auto;	
+}	
+.titlePaneTable > table{
+	width:100%;
+}
+/*used to style the tab label of the title pane*/
+.dijitTitlePaneTextNode{
+
+}
+/*used to style the inner table of the title pane*/
+table.titlePaneTable td{
+	border:none;	
+}
+table.titlePaneTable{
+	border:none;
+}	
+	
+/************************************************Dijit Title Pane Style End**********************************************/
+
+/************************************************Tableless Form Style START**********************************************/
+/* ----------- My Form Section ----------- */
+.formSection {
+	margin: 1em auto;
+	width: 90%;
+	padding: 14px 0;
+}
+
+div.formSection  {
+	border: solid 1px #ccc;
+}
+
+span.formTitle  h1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	padding-left:20px;
+}
+
+span.formDescription  p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #ccc;
+	padding-bottom: 10px;
+	padding-left:20px;
+}
+
+div.formSection  label.leftPositionedLabel {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	width: 140px;
+	float:left;
+}
+div.formSection  label.abovePositionedLabel {
+	display: block;
+	font-weight: bold;
+	text-align: left;
+	width: 140px;
+}
+div.formSection  span.leftPositionedLabel {
+	display: block;
+	font-weight: bold;
+	text-align: right;
+	width: 140px;
+	float:left;
+}
+div.formSection  span.abovePositionedLabel {
+	display: block;
+	font-weight: bold;
+	text-align: left;
+	width: 140px;
+}
+div.formSection .small {
+	color: #666666;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	width: 140px;
+}
+div.formSection label.leftPositionedLabel  span.small{
+	text-align: right;
+}	
+
+div.formSection label.abovePositionedLabel  span.small{
+	text-align: left;
+}
+
+br{
+clear: both;
+}
+
+span.rightSide{
+	margin-left: 20px;
+	margin-bottom: 20px;
+	float:left;
+}
+span.positionedBelow{
+	display: block;
+	margin-top: 4px;
+}
+
+/************************************************Tableless Form Style END**********************************************/
+
+/************************************************Radio Group Style START***********************************************/
+.radioGroup{
+	border: none;
+}
+table.radioGroup tr td{
+	border: none;
+}
+/************************************************Radio Group Style END*************************************************/
+/*********************************************CheckBox Group Style START***********************************************/
+.checkBoxGroup{
+	border: none;
+}
+table.checkBoxGroup tr td{
+	border: none;
+}
+/*********************************************CheckBox Group Style END*************************************************/
+/*********************************************Listbox  Style START*****************************************************/
+.standardListBox{
+width: 182px;	
+}	
+/*********************************************Listbox  Style END*******************************************************/
+
+/*********************************************Error Component and Error Page Style START*******************************/
+
+.unsupportedComponent{
+	background-color:red;
+	width:300px;
+	height:50px;
+}
+.green{
+	background-color:#4dff62;
+	width:300px;
+	height:auto;
+}
+.yellow{
+	background-color:yellow;
+	width:300px;
+	height:auto;
+}
+.red{
+	background-color:red;
+	width:300px;
+	height:auto;
+}
+div.errorContainer{
+	margin:20px 50px;
+}
+.errorContainer h1{
+	font: bold 2.5em Times New Roman;
+	margin: 0.75em 0em;
+}
+.errorContainer p{
+	font-family: Times New Roman;
+	margin: 0.9em 0em;
+	font-size: 1.5em;
+}
+/*********************************************Error Component and Error Page Style END*********************************/
+.fullSize{
+	height:100%;
+	width:100%;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>xcel_navigator_top_template</component-type>
+    <composite-name>xcel_navigator_top_template</composite-name>
+    <composite-file>/xcel_navigator_top_template.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+      </designer-extension>
+    </composite-extension>
+  </composite-component>
+</faces-config>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<acc:accelerator xmlns:acc="gbs.com/accelerator/configuration" description="Default Accelerator Configuration">
+  <elementNameConfig/>
+  <databaseconverter>
+    <staticResourcesConfig>
+      <staticResources path="css/xcel_actionBar.css" type="CSS" name="" comment="Style Sheet for Action Bar"/>
+      <staticResources path="css/xcel_formStyle.css" type="CSS" name="" comment="Style Sheet for Xpage Forms"/>
+      <staticResources path="css/xcel_viewpicklist.css" type="CSS" name="" comment="Style Sheet for View Pick Lists"/>
+      <staticResources path="css/xcel_viewpicklistCC.css" type="CSS" name="" comment="Style Sheet for View Pick Lists in Custom Controls"/>
+      <staticResources path="css/xcel_unsupportedComponentStyle.css" type="CSS" name="" comment="Style Sheet for Unsupported Component"/>
+      <staticResources path="css/dynamic/xcel_bootstrap_helper.css" type="CSS" name="" comment="Style Sheet to help bootstrap controls"/>
+      <staticResources path="css/xcel_outline_helper.css" type="CSS" name="" comment="Style Sheet to help outline controls"/>
+      <staticResources path="css/dynamic/xcel_header.css" type="CSS" name="" comment="Style Sheet to for header"/>
+      <staticResources path="imageresources/xcel_unconvertedimage.gif" type="ImageResource" name="" comment="Default image for those that cannot be xcelerated"/>
+      <staticResources path="imageresources/1_Day_deselected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/1_Day_selected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/1_Week_deselected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/1_Week_selected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/1_Work_Week_deselected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/1_Work_Week_selected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/2_Days_deselected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/2_Days_selected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/2_Weeks_deselected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/2_Weeks_selected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/All_Entries_deselected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/All_Entries_selected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/Month_deselected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/Month_selected_24.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/list_deselected_1.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/list_selected_1.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/timeblock_deselected_1.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="imageresources/timeblock_selected_1.gif" type="ImageResource" name="" comment="Day"/>
+      <staticResources path="icons/customcontrols/actionbar.gif" name="" comment="Icon for Actionbar custom controls"/>
+      <staticResources path="icons/customcontrols/folder.png" name="" comment="Icon for Folders custom controls"/>
+      <staticResources path="icons/customcontrols/form.png" name="" comment="Icon for Forms custom controls"/>
+      <staticResources path="icons/customcontrols/outline.png" name="" comment="Icon for Outline custom controls"/>
+      <staticResources path="icons/customcontrols/page.png" name="" comment="Icon for Page custom controls"/>
+      <staticResources path="icons/customcontrols/subform.png" name="" comment="Icon for Subforms custom controls"/>
+      <staticResources path="icons/customcontrols/view.png" name="" comment="Icon for Views custom controls"/>
+      <staticResources path="icons/customcontrols/Fields.png" name="" comment="Icon for Shared Field custom controls"/>
+      <staticResources path="icons/customcontrols/glyphicons-halflings-white.png" name="" comment="Icon for the Hobbit (dojo)"/>
+      <staticResources path="icons/customcontrols/glyphicons-halflings.png" name="" comment="Icon for the Hobbit (dojo)"/>
+      <staticResources path="javascript/server/xcel_ssjs_atFunctions.jss" type="SSJS" comment="Implementation of @Functions"/>
+      <staticResources path="javascript/server/xcel_ssjs_atCommands.jss" type="SSJS" comment="Implementation of @Commands"/>
+      <staticResources path="javascript/server/xcel_ssjs_common.jss" type="SSJS" comment="SSJS for Common Functions"/>
+      <staticResources path="javascript/server/xcel_ssjs_OpenLog.jss" type="SSJS" comment="SSJS for Logging"/>
+      <staticResources path="javascript/server/xcel_ssjs_attachment.jss" type="SSJS" comment="SSJS for Attachments"/>
+      <staticResources path="javascript/server/xcel_ssjs_DynamicViewCtrl.jss" type="SSJS" comment="SSJS for Dynamic View Control"/>
+      <staticResources path="javascript/server/xcel_ssjs_utilities.jss" type="SSJS" comment="SSJS for More Utility Functions"/>
+      <staticResources path="javascript/server/xcel_ssjs_dojoview_functions.jss" type="SSJS" comment="SSJS for View Functions"/>
+      <staticResources path="javascript/server/xcel_ssjs_dataview_functions.jss" type="SSJS" comment="SSJS for View Functions"/>
+      <staticResources path="javascript/server/xcel_ssjs_dynamicview_functions.jss" type="SSJS" comment="SSJS for View Functions"/>
+      <staticResources path="customcontrols/xcel_embeddedDatePicker.xsp" type="CustomControl" comment="Custom Control for Date Picker "/>
+      <staticResources path="customcontrols/xcel_titlePane.xsp" type="CustomControl" comment="Custom Control for Title Pane"/>
+      <staticResources path="customcontrols/xcel_navigator.xsp" type="CustomControl" comment="Custom Control for Dev Navigator"/>
+      <staticResources path="customcontrols/xcel_navigator_template.xsp" type="CustomControl" comment="Template for creating Side Navigator"/>
+      <staticResources path="customcontrols/xcel_dynamicViewController.xsp" type="CustomControl" comment="Custom Control for Dynamic View Controller"/>
+      <staticResources path="customcontrols/xcel_fileDownloader.xsp" type="CustomControl" comment="Custom Control for File Downloader"/>
+      <staticResources path="customcontrols/xcel_unsupportedComponent.xsp" type="CustomControl" comment="Custom Control for Unsupported Component"/>
+      <staticResources path="customcontrols/xcel_cc_actionBar.xsp" type="CustomControl" comment="Custom Control for ActionBar"/>
+      <staticResources path="customcontrols/xcel_cc_dropDownButton.xsp" type="CustomControl" comment="Custom Control for Drop Down Buttons"/>
+      <staticResources path="customcontrols/xcel_navigator_top.xsp" type="CustomControl" comment="Custom Control for Dev Top Bootstrap Navigator"/>
+      <staticResources path="customcontrols/xcel_navigator_top_template.xsp" type="CustomControl" comment="Template Custom Control for Top Bootstrap Navigator"/>
+      <staticResources path="customcontrols/dynamic/xcel_themeDialog.xsp" type="CustomControl" comment="Theme Picker Dialog"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_commonFooter.xsp" type="CustomControl" comment="Custom Control for ActionBar"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_commonHeader.xsp" type="CustomControl" comment="Custom Control for Drop Down Buttons"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_form.xsp" type="CustomControl" comment="Custom Control for Form Heading"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_formGridRow.xsp" type="CustomControl" comment="Custom Control for Form Row"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_formGridRowColumn.xsp" type="CustomControl" comment="Custom Control for Form Section"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_formLayoutGrid.xsp" type="CustomControl" comment="Custom Control for Form Grid"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_formLayoutSection.xsp" type="CustomControl" comment="Custom Control for Form Control"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_layout.xsp" type="CustomControl" comment="Custom Control for Form Control"/>
+      <staticResources path="customcontrols/dynamic/xcel_cc_layoutStructure.xsp" type="CustomControl" comment="Custom Control for Form Control"/>
+      <staticResources path="customcontrols/actionManager.xsp" type="CustomControl" comment="Custom Control for Calendar View Action"/>
+      <staticResources path="javascript/client/BootstrapNavigator.js" type="CSJS" comment="File from IBM for Navigator for Bootstrap -- DO NOT RENAME"/>
+      <staticResources path="javascript/client/xcel_csjs_clientUtils.js" type="CSJS" comment="CSJS for Client Utils"/>
+      <staticResources path="javascript/client/xcel_csjs_ActionBarSupport.js" type="CSJS" comment="CSJS for Action Bar"/>
+      <staticResources path="javascript/client/xcel_csjs_dojoview_functions.js" type="CSJS" comment="CSJS for View"/>
+      <staticResources path="javascript/client/xcel_csjs_dataview_functions.js" type="CSJS" comment="CSJS for View"/>
+      <staticResources path="javascript/client/xcel_csjs_dynamicview_functions.js" type="CSJS" comment="CSJS for View"/>
+      <staticResources path="javascript/client/xcel_csjs_viewHelper.js" type="CSJS" comment="CSJS for View"/>
+      <staticResources path="themes/dynamic/xcel_bootstrap.theme" type="Theme" comment="Bootstrap Theme"/>
+      <staticResources path="themes/dynamic/xcel_bootstrap3.theme" type="Theme" comment="Bootstrap 3.0 Theme"/>
+      <staticResources path="themes/dynamic/xcel_borderContainer.theme" type="Theme" comment="BorderContainer Theme"/>
+      <staticResources path="themes/dynamic/xcel_borderContainer_extended.theme" type="Theme" comment="BorderContainer Theme"/>
+      <staticResources path="xpage/xcel_viewDisplayDynamicLayout.xsp" type="Xpage" comment="CSJS for View Display Dynamic"/>
+      <staticResources path="css/dynamic/xcel_dojoContainer_expanded.css" type="CSS" name="" comment="Style Sheet for Bootstrap"/>
+      <staticResources path="css/dynamic/xcel_dojoContainer.css" type="CSS" name="" comment="Style Sheet for Dojo Container"/>
+      <staticResources path="commoncomponents/xcel_fileUploadDownload.xsp" type="CustomControl" comment="Custom Control for Fiel Download and Upload Controls"/>
+    </staticResourcesConfig>
+  </databaseconverter>
+  <folderconverter stylesheet="xslt/viewFolder.xslt"/>
+  <formconverter stylesheet="xslt/readonly_formPageSubform.xslt"/>
+  <outlineconverter stylesheet="xslt/outline.xslt"/>
+  <pageconverter stylesheet="xslt/readonly_formPageSubform.xslt"/>
+  <subformconverter stylesheet="xslt/readonly_formPageSubform.xslt"/>
+  <viewconverter stylesheet="xslt/viewFolder.xslt"/>
+  <actionbarconverter stylesheet="xslt/actionbar.xslt"/>
+  <formulaconverter bodyTemplate="stg/body.stg" actionbarTemplate="stg/actionbar.stg"/>
+  <sharedfieldsconverter stylesheet="xslt/container_formPageSubform.xslt"/>
+  <dxlnlsconverter mapfile="nls/dxlnlsmap.xml"/>
+</acc:accelerator>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+         xmlns:xe="http://www.ibm.com/xsp/coreex"
+         xmlns:xc="http://www.ibm.com/xsp/custom"
+         xmlns:gbs="http://www.gbs.com/xcel">
+   <xp:this.resources>
+      <xp:script src="/xcel_ssjs_common.jss" clientSide="false"/>
+      <xp:script src="/xcel_ElementNameMap.jss" clientSide="false"/>
+      <xp:script src="/ccoutline_outline_body.jss" clientSide="false"/>
+      <xp:styleSheet href="/xcel_outline_helper.css"/>
+   </xp:this.resources>
+   <xe:navigator id="outline" expandEffect="wipe" expandable="true">
+      <xe:this.treeNodes>
+         <xe:basicLeafNode label="Announcements"
+                           href="#{javascript:'/xcel_viewDisplayDynamicLayout.xsp?vw=employeeAnnouncements';}"/>
+         <xe:basicLeafNode label="My Open Tickets"
+                           image="/outline-view-icon.gif"
+                           href="#{javascript:getConvertedElement('page', 'employeeMyOpenTickets') + '.xsp';}"/>
+         <xe:basicLeafNode label="My Closed Tickets"
+                           image="/outline-view-icon.gif"
+                           href="#{javascript:getConvertedElement('page', 'employeeMyClosedTickets') + '.xsp';}"/>
+         <xe:basicLeafNode label="My Drafts"
+                           image="/outline-view-icon.gif"
+                           href="#{javascript:getConvertedElement('page', 'employeeMyDrafts') + '.xsp';}"/>
+         <xe:basicLeafNode label="none"/>
+         <xe:basicContainerNode label="Staff">
+            <xe:this.children>
+               <xe:basicLeafNode label="All Tickets"
+                                 styleClass="indiv_padding1"
+                                 href="#{javascript:'/xcel_viewDisplayDynamicLayout.xsp?vw=staffAllTickets';}"/>
+               <xe:basicLeafNode label="All Tickets By Category"
+                                 styleClass="indiv_padding1"
+                                 href="#{javascript:'/xcel_viewDisplayDynamicLayout.xsp?vw=staffAllTicketsByCategory';}"/>
+               <xe:basicLeafNode label="Assigned To Me"
+                                 styleClass="indiv_padding1"
+                                 image="/outline-view-icon.gif"
+                                 href="#{javascript:getConvertedElement('page', 'staffMyAssigned') + '.xsp';}"/>
+               <xe:basicLeafNode label="Unassigned"
+                                 styleClass="indiv_padding1"
+                                 href="#{javascript:'/xcel_viewDisplayDynamicLayout.xsp?vw=staffUnassigned';}"/>
+            </xe:this.children>
+         </xe:basicContainerNode>
+         <xe:separatorTreeNode/>
+         <xe:basicContainerNode label="Manager">
+            <xe:this.children>
+               <xe:basicLeafNode label="Announcements"
+                                 styleClass="indiv_padding1"
+                                 href="#{javascript:'/xcel_viewDisplayDynamicLayout.xsp?vw=managerAnnouncements';}"/>
+               <xe:basicLeafNode label="Categories"
+                                 styleClass="indiv_padding1"
+                                 href="#{javascript:'/xcel_viewDisplayDynamicLayout.xsp?vw=managerCategories';}"/>
+            </xe:this.children>
+         </xe:basicContainerNode>
+         <xe:separatorTreeNode/>
+      </xe:this.treeNodes>
+   </xe:navigator>
+</xp:view>

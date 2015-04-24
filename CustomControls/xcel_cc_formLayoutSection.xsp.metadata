@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2ca" sequence="12" unid="440BD5DDAECC8E0785257E26006D3A9E">
+<created><datetime dst="true">20150413T155304,30-04</datetime></created>
+<modified><datetime dst="true">20150424T123418,28-04</datetime></modified>
+<revised><datetime dst="true">20150414T102639,45-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123418,27-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123418,27-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$Flags"><text>gC~4;P</text></item>
+<item name="$TITLE"><text>xcel_cc_formLayoutSection.xsp</text></item>
+<item name="$Comment" sign="true"><text>Xcelerator. Custom Control for Form Control</text></item>
+
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+</note>

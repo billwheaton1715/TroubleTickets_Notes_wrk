@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	
+
+	<xp:this.resources>
+		<xp:script src="/xcel_ssjs_DynamicViewCtrl.jss"
+			clientSide="false">
+		</xp:script>
+	</xp:this.resources>
+	
+	<xp:this.beforePageLoad><![CDATA[#{javascript:
+		getViewNameScope();
+	}]]>
+	</xp:this.beforePageLoad>
+	<xp:panel>
+		<xe:dynamicViewPanel id="dynamicViewPanel" rows="15"
+			customizerBean="com.netnotes.beans.dvpbean.MyCustomizerBean"
+			width="100%">
+			<xp:this.facets>
+				<xp:panel xp:key="headerPager">
+					<xe:pagerExpand id="pagerExpand1">
+						<xe:this.rendered><![CDATA[#{javascript:
+							return true;
+						}]]>
+						</xe:this.rendered>
+					</xe:pagerExpand>
+
+
+					<xp:br />
+
+					<xp:pager layout="Previous Group Next"
+						partialRefresh="true" id="pager" for="dynamicViewPanel">
+					</xp:pager>
+				</xp:panel>
+			</xp:this.facets>
+			<xe:this.data>
+				<xp:dominoView var="selectedView"
+					viewName="#{javascript:return sessionScope.selectedView;}"
+					expandLevel="1">
+				</xp:dominoView>
+			</xe:this.data>
+		</xe:dynamicViewPanel>
+	</xp:panel>
+	<xp:br></xp:br>
+
+
+</xp:view>

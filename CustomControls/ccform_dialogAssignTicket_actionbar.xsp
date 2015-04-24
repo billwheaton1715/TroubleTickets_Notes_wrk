@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+         xmlns:xe="http://www.ibm.com/xsp/coreex"
+         xmlns:xc="http://www.ibm.com/xsp/custom">
+   <xp:this.resources>
+      <xp:styleSheet href="/xcel_actionBar.css"/>
+      <xp:script src="/form_dialogAssignTicket_body.jss" clientSide="false"/>
+      <xp:script src="/ccform_dialogAssignTicket_actionbar.jss" clientSide="false"/>
+      <xp:script src="/xcel_SharedActions.jss" clientSide="false"/>
+      <xp:script src="/xcel_csjs_ActionBarSupport.js" clientSide="true"/>
+      <xp:script src="/xcel_csjs_clientUtils.js" clientSide="true"/>
+   </xp:this.resources>
+   <xp:eventHandler event="onClientLoad" submit="false">
+      <xp:this.script><![CDATA[ 				  	
+					hideEmptyMenuItems();
+					checkWidthChanges();	  			
+ 		]]></xp:this.script>
+   </xp:eventHandler>
+   <xp:panel id="prtActionBar" styleClass="fullSize">
+      <div id="cssmenu"><xp:panel tagName="ul" id="topMenu"></xp:panel></div>
+   </xp:panel>
+</xp:view>

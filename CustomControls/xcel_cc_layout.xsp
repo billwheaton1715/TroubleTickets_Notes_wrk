@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:styleSheet href="/xcel_formStyle.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:xcel_cc_layoutStructure configuration="#{compositeData.configuration}">
+		<xp:this.facets>	
+			<xp:panel xp:key="top">
+				<xp:panel id="prtHeadline">
+					<xp:callback facetName="headline" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel xp:key="leading">
+				<xp:panel id="prtNavigation">
+				<xp:callback facetName="navigation" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel xp:key="center">
+				<xp:panel id="prtContent"  styleClass="fullSize">
+				<xp:callback facetName="content" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel xp:key="trailing">
+				<xp:panel id="prtPreview">
+				<xp:callback facetName="preview" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel xp:key="bottom">
+				<xp:panel id="prtLegal" >
+					<xp:callback facetName="legal" />
+				</xp:panel>
+			</xp:panel>
+		</xp:this.facets>
+	</xc:xcel_cc_layoutStructure>
+</xp:view>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3ca" sequence="2" unid="EE0D007A2384615A85257E26006D3B26">
+<created><datetime dst="true">20150413T155305,66-04</datetime></created>
+<modified><datetime dst="true">20150424T123419,56-04</datetime></modified>
+<revised><datetime dst="true">20150413T155308,56-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123419,55-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123419,55-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$TITLE" sign="true"><text>page_frameHeader_body</text></item>
+<item name="$Comment" sign="true"><text>Xcelerator. Body code from: frameHeader</text></item>
+<item name="$Flags"><text>.5834Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+</note>

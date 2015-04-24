@@ -1,0 +1,92 @@
+body {
+	background-color: #356AA0;
+	margin: 0px;
+	padding: 0px;
+}
+
+.dijitSplitContainer-dijitContentPane, 
+.dijitBorderContainer-dijitContentPane,
+.dijitTabContainerTop-dijitContentPane,
+.dijitTabContainerLeft-dijitContentPane,
+.dijitTabContainerBottom-dijitContentPane,
+.dijitTabContainerRight-dijitContentPane,
+.dijitAccordionContainer-dijitContentPane {
+	background-color: #3F4C6B;
+}
+
+.dijitExpandoPane {
+	background-color: #eee;
+}
+.dojoxExpandoContent {
+	padding: 8px 0px 8px 8px;
+}
+
+.dijitBorderContainer,
+.dijitSplitterV, .dijitGutterV {
+	background-color: #eee;
+}
+
+.dijitSplitContainer-child, 
+.dijitBorderContainer-child {
+	border: 1px solid #666;
+}
+
+.dojoxExpandoIcon {
+	background-image: url(spriteRoundedIconsSmall.gif);
+}
+table.xspDataTableViewPanel {
+	width: 100%;
+}
+form > div[dojotype="dijit.layout.BorderContainer"] > div[region="top"] {
+	background-color: #C3D9FF;
+}
+form > div[dojotype="dijit.layout.BorderContainer"] > div[region="top"] > h1 {
+	padding: 8px 0px 4px 8px;
+	margin: 0px;
+}
+form > div[dojotype="dijit.layout.BorderContainer"] > div[region="top"] > h2 {
+	padding: 0px 0px 8px 8px;
+	margin: 0px;
+}
+form > div[dojotype="dijit.layout.BorderContainer"] > div[region="center"] > div[dojotype="dijit.layout.BorderContainer"] > div[region="top"] {
+	background-color: #eee;
+	border-color: #eee;
+}
+fieldset > legend > h2 {
+	margin: 0px 0px 0px 0px !important;
+	padding: 0px 0px 4px 0px !important;
+	line-height: normal !important;
+	color: #666;
+}
+fieldset > legend > h2 > span.xspTextComputedField {
+	font-weight: bold;
+}
+fieldset > legend > h3 {
+	margin: 0px 0px 0px 0px !important;
+	padding: 0px 0px 8px 4px !important;
+	line-height: normal !important;
+	font-weight: normal;
+	color: #999;
+}
+.lotusForm fieldset legend{
+	float: right;
+	padding-right: 2em;
+	font-size: 1.5em;
+}	
+.lotusMenu ul li a, .lotusMenu h3, .portlet-menu ul li a, .portlet-menu h3{
+	color: #333 !important;
+}
+.label{
+	text-align: right;
+	white-space: nowrap;
+	color: #333;
+	font-family: "Droid Sans",sans-serif;
+	padding:0 1em 2em 1em;
+
+}
+.control{
+	padding: 0 1em 2em 1em;	
+}
+div.detailLine label{
+	font-weight: bold;
+}

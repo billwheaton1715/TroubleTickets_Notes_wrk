@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="28a" sequence="12" unid="E35D3FFF4768097085257E26006D3A8E">
+<created><datetime dst="true">20150413T155304,14-04</datetime></created>
+<modified><datetime dst="true">20150424T123417,96-04</datetime></modified>
+<revised><datetime dst="true">20150414T102638,89-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123417,95-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123417,95-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$Flags"><text>gC~4;P</text></item>
+<item name="$TITLE"><text>xcel_navigator.xsp</text></item>
+<item name="$Comment" sign="true"><text>Xcelerator. Custom Control for Dev Navigator</text></item>
+
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+</note>

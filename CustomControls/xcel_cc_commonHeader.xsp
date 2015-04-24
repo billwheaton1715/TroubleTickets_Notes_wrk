@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:script src="/xcel_ssjs_utilities.jss" clientSide="false"/>
+	</xp:this.resources>
+	
+	
+	<xp:panel themeId="headerNav">
+		<xp:panel themeId="headerNavContainer">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<xp:panel themeId="headerNavBar">
+				<xp:button themeId="navCollapseButton">
+					<xp:panel themeId="showInBootstrap3Nav" disableOutputTag="true"><span class="sr-only">Toggle navigation</span></xp:panel>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</xp:button>
+				<xp:panel themeId="layout.heading.title.content">
+					<xp:text value="#{javascript:return @DbTitle();}" />
+				</xp:panel>
+			</xp:panel>
+			
+			<xp:panel themeId="showInBootstrapNav" disableOutputTag="true">
+				<xp:panel styleClass="navbar-form navbar-left nav-collapse" style="float:right;">
+					<!-- 
+					<ul class="nav navbar-nav navbar-right header">
+						<li class="header" >
+							<xp:link escape="true" id="themeLink" styleClass="header"  value="">
+								<xp:text styleClass="header" value="#{javascript:return 'Theme';}" />
+								<xp:eventHandler event="onclick" submit="false">
+									<xp:this.script><![CDATA[dijit.byId('#{javascript:getClientId("themeDialog")}').show(); ]]></xp:this.script>
+								</xp:eventHandler>
+							</xp:link>
+						</li>
+					</ul>
+					-->
+				</xp:panel>
+			</xp:panel>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<xp:panel themeId="showInBootstrap3Nav" disableOutputTag="true">
+				<xp:panel themeId="headerNavRight">
+					<!-- 
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Theme
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<xp:link escape="true" text="xcel_borderContainer.theme"
+										id="link1">
+										<xp:eventHandler event="onclick" submit="true"
+											refreshMode="complete">
+											<xp:this.action><![CDATA[#{javascript:var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
+											context.setSessionProperty('xsp.theme', "xcel_borderContainer.theme");
+											context.redirectToPage(f)}]]></xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</li>
+								<li>
+									<xp:link escape="true" text="xcel_borderContainer_extended.theme"
+										id="link2">
+										<xp:eventHandler event="onclick" submit="true"
+											refreshMode="complete">
+											<xp:this.action><![CDATA[#{javascript:var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
+											context.setSessionProperty('xsp.theme', "xcel_borderContainer_extended.theme");
+											context.redirectToPage(f)}]]></xp:this.action>
+										</xp:eventHandler>
+									</xp:link>
+								</li>
+								<li>
+									<xp:link escape="true" text="xcel_bootstrap.theme" id="link3">
+										<xp:eventHandler event="onclick" submit="true"
+											refreshMode="complete">
+											<xp:this.action><![CDATA[#{javascript:var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
+											context.setSessionProperty('xsp.theme', "xcel_bootstrap.theme");
+											context.redirectToPage(f)}]]></xp:this.action>
+										</xp:eventHandler>
+									</xp:link>	
+								</li>
+								<li>
+									<xp:link escape="true" text="xcel_bootstrap3.theme" id="link4">
+										<xp:eventHandler event="onclick" submit="true"
+											refreshMode="complete">
+											<xp:this.action><![CDATA[#{javascript:var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
+											context.setSessionProperty('xsp.theme', "xcel_bootstrap3.theme");
+											context.redirectToPage(f)}]]></xp:this.action>
+										</xp:eventHandler>
+									</xp:link>	
+								</li>
+							</ul>
+						</li>
+					</ul>
+					-->
+				</xp:panel><!-- /.navbar-collapse -->
+			</xp:panel><!-- /.container-fluid -->
+		</xp:panel>
+	</xp:panel>
+	
+	<!-- 
+	<xp:panel themeId="showInBootstrapNav">
+		<xc:xcel_themeDialog></xc:xcel_themeDialog>
+	</xp:panel>
+	 -->
+
+</xp:view>

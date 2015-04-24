@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="27a" sequence="4" unid="0633CD99CF5519C885257E26006D3A87">
+<created><datetime dst="true">20150413T155304,07-04</datetime></created>
+<modified><datetime dst="true">20150424T123417,88-04</datetime></modified>
+<revised><datetime dst="true">20150414T102634,98-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123417,87-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123417,87-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$TITLE" sign="true"><text>xcel_ssjs_dataview_functions</text></item>
+<item name="$Comment" sign="true"><text>Xcelerator. SSJS for View Functions</text></item>
+<item name="$Flags"><text>.5834Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+</note>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xp:scriptBlock id="dropDownHelper">
+		<xp:this.value><![CDATA[
+		dojo.ready(function(){
+			dojo.query('div.dropdown-menu').forEach(function(node) {
+				var ul = node.children[0];
+				dojo.query(ul).removeClass("lotusInlinelist");
+		        dojo.place(ul, node, 'before');
+		        if(node) dojo.destroy(node);
+		    });
+		}); 
+		]]></xp:this.value>
+	</xp:scriptBlock>
+	<xp:div styleClass="navbar">
+		<xp:div styleClass="navbar-inner">
+			<xp:link escape="true" text="#{javascript:@DbTitle()}" id="link1" styleClass="brand"
+				value="#">
+			</xp:link>
+			<xp:panel styleClass="nav" tagName="ul">
+				<xp:this.attrs>
+					<xp:attr name="role" value="navigation"></xp:attr>
+				</xp:this.attrs>
+				<xp:panel styleClass="dropdown" tagName="li">					
+					<xp:panel id="drop1" tagName="a"
+						styleClass="dropdown-toggle">
+						<xp:this.attrs>
+							<xp:attr name="href" value="#"></xp:attr>
+							<xp:attr name="role" value="button"></xp:attr>
+							<xp:attr name="data-toggle" value="dropdown"></xp:attr>		
+						</xp:this.attrs>
+						Forms
+						<b class='caret'></b>		
+					</xp:panel>
+					<xe:linksList id="linksList1" styleClass="dropdown-menu">
+						<xe:this.treeNodes>
+							<xe:repeatTreeNode var="val">
+								<xe:this.children>
+									<xe:basicLeafNode styleClass="dropdown-toggle"
+										role="presentation">
+										<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+										<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+									</xe:basicLeafNode>
+								</xe:this.children>
+								<xe:this.value><![CDATA[#{javascript:
+								if (sessionScope.allForms != null){
+							 		return sessionScope.allForms;
+							 	}
+							 	var forms = database.getForms().iterator();
+							 	var allArray = new Array();
+							 		
+								while (forms.hasNext()) {
+									var formsArray = new Array();
+									var form:NotesForm = forms.next();
+									if (form.isSubForm() == false){
+										formsArray.push(form.getName());
+										var currentForm = form.getName();
+										if (currentForm.indexOf("/") != -1){
+											currentForm = currentForm.substring(currentForm.lastIndexOf("/") +1);
+										}
+										if (currentForm.indexOf("\\") != -1){
+											currentForm = currentForm.substring(currentForm.lastIndexOf("\\") +1);
+										}
+										var urlStr = getConvertedElement("form", currentForm) + ".xsp";
+										
+										//formsArray.push(getConvertedElement("form", currentForm) + ".xsp");
+										if (urlStr == "undefined.xsp"){
+											var iterator:java.util.Iterator = form.getAliases().iterator();
+											while (iterator.hasNext()) {
+												urlStr = getConvertedElement("form", iterator.next()) + ".xsp";
+											}
+											if (urlStr == "undefined.xsp"){
+												urlStr = "xcel_undefined.xsp";
+											}
+										}
+										
+										formsArray.push(urlStr);
+										requestScope.status += "\n" + form.getName();
+										allArray.push(formsArray);
+									}
+								}
+								sessionScope.allForms = allArray;
+								return sessionScope.allForms;
+							}]]>
+								</xe:this.value>
+							</xe:repeatTreeNode>
+						</xe:this.treeNodes>
+						</xe:linksList>	 		
+					</xp:panel>
+					<xp:panel styleClass="dropdown" tagName="li">					
+							<xp:panel id="panel1" tagName="a"
+								styleClass="dropdown-toggle">
+								<xp:this.attrs>
+									<xp:attr name="href" value="#"></xp:attr>
+									<xp:attr name="role" value="button"></xp:attr>
+									<xp:attr name="data-toggle" value="dropdown"></xp:attr>		
+								</xp:this.attrs>
+								Views
+								<b class='caret'></b>		
+							</xp:panel>
+							<xe:linksList id="linksList2" styleClass="dropdown-menu">
+							<xe:this.treeNodes>
+								<xe:repeatTreeNode var="val">
+									<xe:this.children>
+										<xe:basicLeafNode>
+											<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+											<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+										</xe:basicLeafNode>
+									</xe:this.children>
+									<xe:this.value><![CDATA[#{javascript:
+										if (sessionScope.allViews != null){
+									 		return sessionScope.allViews;
+									 	}
+									 	var views = database.getViews().iterator();							 	
+									 	var allArray = new Array();
+										while (views.hasNext()) {
+											var viewsArray = new Array();
+											var view:NotesView = views.next();
+											if (view.getName() != ""){
+												if (view.getName().substring(0,1) == "(" && view.getName().substring(view.getName().length-1, view.getName().length) && view.getAliases().length == 0){
+													//is hidden view with no alias
+													viewsArray.push(view.getName() );
+												}else{
+													viewsArray.push(view.getName());
+												}
+												
+												
+												//will have to account for spaces 
+												
+												viewsArray.push("xcel_viewDisplayDynamicLayout.xsp?vw="+view.getName());
+												allArray.push(viewsArray);
+												
+											}
+										}
+										sessionScope.allViews = allArray;
+										return sessionScope.allViews;
+									}]]>			
+									</xe:this.value>
+								</xe:repeatTreeNode>
+							</xe:this.treeNodes>	
+						</xe:linksList>	 		
+					</xp:panel>		
+					<xp:panel styleClass="dropdown" tagName="li">					
+							<xp:panel id="panel2" tagName="a"
+								styleClass="dropdown-toggle">
+								<xp:this.attrs>
+									<xp:attr name="href" value="#"></xp:attr>
+									<xp:attr name="role" value="button"></xp:attr>
+									<xp:attr name="data-toggle" value="dropdown"></xp:attr>		
+								</xp:this.attrs>
+								Pages
+								<b class='caret'></b>		
+							</xp:panel>
+							<xe:linksList id="linksList3" styleClass="dropdown-menu">
+								<xe:this.treeNodes>
+									<xe:repeatTreeNode var="val">
+										<xe:this.children>
+											<xe:basicLeafNode>
+												<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+												<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+											</xe:basicLeafNode>
+										</xe:this.children>
+										<xe:this.value><![CDATA[#{javascript:					
+											if (sessionScope.allPageElements != null){
+										 		return sessionScope.allPageElements;
+										 	}
+										 	
+										 	var pageCollection:NotesNoteCollection = database.createNoteCollection(false);
+										 	var allArray = new Array();					
+											
+											pageCollection.setSelectPages(true);
+											pageCollection.buildCollection();
+											var id:string = pageCollection.getFirstNoteID();
+											
+												while (id.length() > 0) {
+													var tmpid = pageCollection.getNextNoteID(id);
+													var doc:NotesDocument = database.getDocumentByID(id);
+													var pageName:string = doc.getItemValueString("$Title");
+													
+													if (pageName != ""){
+														var pagesArray = new Array();
+														print (pageName);
+														print (getConvertedElement("page",pageName) + ".xsp");
+														pagesArray.push(pageName);
+														pagesArray.push(getConvertedElement("page",pageName) + ".xsp");
+														requestScope.status += "\n" + pageName;
+														allArray.push(pagesArray);
+													}
+													id = tmpid;
+												}
+											sessionScope.allPageElements = allArray;
+											return sessionScope.allPageElements;
+										}]]>
+						
+										</xe:this.value>
+									</xe:repeatTreeNode>
+								</xe:this.treeNodes>	
+						</xe:linksList>	 		
+				</xp:panel>			
+			</xp:panel>
+		</xp:div>
+	</xp:div> 
+</xp:view>

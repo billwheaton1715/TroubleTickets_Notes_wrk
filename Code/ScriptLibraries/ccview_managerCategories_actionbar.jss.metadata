@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="35e" sequence="2" unid="1CF116D983F0DF4B85257E26006D3AE6">
+<created><datetime dst="true">20150413T155305,02-04</datetime></created>
+<modified><datetime dst="true">20150424T123419,02-04</datetime></modified>
+<revised><datetime dst="true">20150413T155307,48-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123419,01-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123419,01-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$TITLE" sign="true"><text>ccview_managerCategories_actionbar</text></item>
+<item name="$Comment" sign="true"><text>Xcelerator. Actionbar code from: managerCategories</text></item>
+<item name="$Flags"><text>.5834Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+</note>

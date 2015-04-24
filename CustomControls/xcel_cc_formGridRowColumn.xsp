@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel
+		themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_formGridRowColumn','rowColumnContainer');}">
+		<xp:panel
+			themeId="${compositeData.columnType}">
+			<xp:callback
+				facetName="center" />
+		</xp:panel>
+	</xp:panel>
+
+</xp:view>

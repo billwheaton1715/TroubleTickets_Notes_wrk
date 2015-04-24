@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	dojoTheme="true">
+
+	<xp:this.resources>
+		<xp:dojoModule name="dijit.TitlePane" />
+	</xp:this.resources>	
+
+	<xp:div
+		dojoType="dijit.TitlePane"
+		title="#{compositeData.title}">
+		<xp:this.dojoAttributes>
+			<xp:dojoAttribute
+				name="closable"
+				value="#{compositeData.closable}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="doLayout"
+				value="#{compositeData.doLayout}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="dragRestriction"
+				value="#{compositeData.dragRestriction}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="errorMessage"
+				value="#{compositeData.errorMessage}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="extractContent"
+				value="#{compositeData.extractContent}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="href"
+				value="#{compositeData.href}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="loadingMessage"
+				value="#{compositeData.loadingMessage}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="open"
+				value="#{compositeData.open}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="parseOnLoad"
+				value="#{compositeData.parseOnLoad}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="preload"
+				value="#{compositeData.preload}">
+			</xp:dojoAttribute>
+			<xp:dojoAttribute
+				name="toggleable"
+				value="#{compositeData.toggleable}">
+			</xp:dojoAttribute>
+		</xp:this.dojoAttributes>
+
+		<xp:callback facetName="body"></xp:callback>
+
+	</xp:div>
+
+</xp:view>

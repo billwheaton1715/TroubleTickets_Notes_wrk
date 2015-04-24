@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+         xmlns:xc="http://www.ibm.com/xsp/custom"
+         xmlns:xe="http://www.ibm.com/xsp/coreex"
+         xmlns:xcel="http://www.gbs.com/xsp/control">
+   <xp:this.resources>
+      <xp:script src="/xcel_ssjs_dataview_functions.jss" clientSide="false"/>
+      <xp:script src="/xcel_csjs_dataview_functions.js" clientSide="true"/>
+      <xp:script src="/xcel_ssjs_utilities.jss" clientSide="false"/>
+      <xp:script src="/xcel_ElementNameMap.jss" clientSide="false"/>
+   </xp:this.resources>
+   <xp:panel id="dataViewContainer_view">
+      <xe:dataView id="view"
+                   collapsibleRows="true"
+                   collapsibleDetail="true"
+                   columnTitles="true"
+                   showCheckbox="true"
+                   showHeaderCheckbox="true"
+                   expandedDetail="false"
+                   var="vEntry_view"
+                   rowStyleClass=""
+                   styleClass="">
+         <xp:this.facets>
+            <xp:panel xp:key="pagerTopRight">
+               <xp:panel id="ftIndexedSearch" styleClass="searchBarStyle">
+                  <xp:this.rendered><![CDATA[#{javascript:try {
+							var isIndexed = database.isFTIndexed();
+							if(isIndexed)return true; 
+							else return false;
+							} catch(e) {
+								return false;
+							}}]]></xp:this.rendered>
+                  <!--If column value is a formula (starts with a '$'), the search filter combo needs to be manually remediated to use a field name instead--><xp:span>
+	                  	Search In:
+						<xp:comboBox id="filterCombo_view" styleClass="searchElements">
+                        <xp:selectItem itemLabel="All Columns" itemValue="All Fields"/>
+                        <xp:selectItem itemLabel="Category" itemValue="Name"/>
+                        <xp:selectItem itemLabel="Resources" itemValue="$2"/>
+                     </xp:comboBox>
+                  </xp:span>
+                  <xp:span>
+                     <xp:inputText id="searchEditField_view"
+                                   style="width:200px"
+                                   styleClass="searchElements"/>
+                     <xp:button value="Search" id="searchButton_view">
+                        <xp:eventHandler event="onclick"
+                                         submit="true"
+                                         refreshMode="partial"
+                                         refreshId="view">
+                           <xp:this.action><![CDATA[#{javascript:var field = getComponent('filterCombo_view').getValue();
+var search = getComponent('searchEditField_view').getValue();
+var query = '';
+
+if(search == "" ) viewScope.searchValue = "";
+else{ search.trim();
+	if (field == 'All Fields') {
+	    query = search + '*';
+	} else {
+	    query = 'FIELD ' + field + ' CONTAINS ' + search + '*';
+	}
+	viewScope.searchValue = query;
+}}]]></xp:this.action>
+                        </xp:eventHandler>
+                     </xp:button>
+                  </xp:span>
+               </xp:panel>
+            </xp:panel>
+            <xe:pagerAddRows id="pagerAddRows_view" xp:key="pagerBottom" refreshPage="true">
+               <xe:this.rendered><![CDATA[#{javascript:
+							var dv = getComponent('view');
+							return (dv.getRowCount() > dv.getRows());
+							}]]></xe:this.rendered>
+            </xe:pagerAddRows>
+            <!--Columns containing multiple values need to be remediated to a string format, otherwise you may see multipled details--><xp:text escape="true" xp:key="detail" contentType="html">
+               <xp:this.value><![CDATA[#{javascript:var colStr = "<div class='detailLine'><label>Category</label>: " + vEntry_view.getColumnValue("Name")+"</div>";	
+		colStr += "<div class='detailLine'><label>Resources</label>: " + vEntry_view.getColumnValue("$2")+"</div>";
+			return colStr;}]]></xp:this.value>
+            </xp:text>
+         </xp:this.facets>
+         <xe:this.data>
+            <xp:dominoView var="view_managerCategories"
+                           viewName="managerCategories"
+                           categoryFilter="#{javascript:getViewCategoryFilter()}">
+               <xp:this.search><![CDATA[#{javascript:viewScope.get("searchValue");}]]></xp:this.search>
+            </xp:dominoView>
+         </xe:this.data>
+         <xe:this.summaryColumn>
+            <xe:viewSummaryColumn columnTitle="Category"
+                                  columnName="Name"
+                                  styleClass=""
+                                  headerStyleClass=""/>
+         </xe:this.summaryColumn>
+         <!----></xe:dataView>
+   </xp:panel>
+   <!--
+			For xe:pagerSaveState - - the following is required to run just before
+			re-opening the dataview
+			viewStateBean.restoreState = true;
+		--><xe:pagerSaveState id="pageSaveState_view" for="view"/>
+</xp:view>

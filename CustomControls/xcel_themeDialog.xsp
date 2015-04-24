@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"  dojoParseOnLoad="true">
+
+	<xp:this.resources>		
+		<xp:script src="/xcel_ssjs_utilities.jss" clientSide="false"/>
+		<xp:dojoModule name="dojo.parser"></xp:dojoModule>
+		<xp:dojoModule name="dijit.Dialog"></xp:dojoModule>
+	</xp:this.resources>
+
+<xp:panel>
+		<xp:this.rendered><![CDATA[#{javascript:
+		if (themeFunctions.getCurrentTheme() == "xcel_bootstrap.theme"){							
+		//if (context.getSessionProperty('xsp.theme') == "xcel_bootstrap.theme"){
+			return true;
+		}else{
+			return true;
+		};}]]></xp:this.rendered>
+	<xp:scriptBlock>
+		<xp:this.value>
+			function dialog_create(id, dialogTitle) { var
+			dialogWidget =
+			dijit.byId(id); if( dialogWidget )
+			dialogWidget.destroyRecursive(true);
+
+			dialogWidget = new dijit.Dialog({
+			title: dialogTitle,
+			duration:600}, dojo.byId(id));
+
+			var dialog =
+			dojo.byId(id);
+			dialog.parentNode.removeChild(dialog);
+
+			var form =
+			document.forms[0]; form.appendChild(dialog);
+			dialogWidget.startup(); }
+
+			XSP.addOnLoad(function(){dialog_create('#{javascript:getClientId("themeDialog")}', "Change Theme")});
+		</xp:this.value>
+	</xp:scriptBlock>
+
+
+	<xp:panel id="themeDialog" style="display:none">
+		<table style="text-align:center;">
+			<tr>
+				<td>
+					 <xp:comboBox id="dojoThemeCombo"
+      	defaultValue="#{javascript:if (context.getSessionProperty('xsp.theme') == null){
+      		return 'xcel_bootstrap.theme';
+      	}else{
+      		return context.getSessionProperty('xsp.theme');
+      	};}" 
+      	style="width:20em">
+      	
+      	<xp:selectItem itemLabel="xcel_borderContainer.theme"
+      		itemValue="xcel_borderContainer.theme" />
+      	<xp:selectItem itemLabel="xcel_borderContainer_extended.theme"
+      		itemValue="xcel_borderContainer_extended.theme" />
+      	<xp:selectItem itemLabel="xcel_bootstrap.theme"
+      		itemValue="xcel_bootstrap.theme" />
+      	<xp:selectItem itemLabel="xcel_bootstrap3.theme"
+      		itemValue="xcel_bootstrap3.theme" />      		
+      		
+      	<xp:eventHandler event="onchange" submit="true"
+      		refreshMode="complete" disableValidators="true">
+      		<xp:this.action><![CDATA[#{javascript:
+										var f = "/"+@RightBack(context.getUrl().getAddress(),"/");
+										context.setSessionProperty('xsp.theme', getComponent('dojoThemeCombo').getValue());
+										context.redirectToPage(f)
+										}]]></xp:this.action>
+      	</xp:eventHandler>
+      </xp:comboBox>
+				</td>
+			</tr>
+			<tr>
+				<td><br/><br/>
+					<xp:button  value="Close" id="cancelDialogButton">
+							<xp:eventHandler event="onclick" submit="false">
+								<xp:this.script><![CDATA[dijit.byId('#{javascript:getClientId("themeDialog")}').hide(); ]]></xp:this.script>
+							</xp:eventHandler>
+					</xp:button>
+					
+				</td>
+			</tr>
+		</table>
+	</xp:panel>
+</xp:panel>
+</xp:view>

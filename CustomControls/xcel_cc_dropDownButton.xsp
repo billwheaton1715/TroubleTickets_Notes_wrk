@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel
+		id="dropDownButton"
+		themeId="dropDownButton">
+		<xp:callback
+			facetName="label">
+		</xp:callback>
+		<xp:callback
+			facetName="content" />
+	</xp:panel>
+
+</xp:view>

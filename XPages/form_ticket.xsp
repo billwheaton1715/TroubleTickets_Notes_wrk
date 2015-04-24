@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+         xmlns:xc="http://www.ibm.com/xsp/custom"
+         xmlns:xe="http://www.ibm.com/xsp/coreex"
+         xmlns:gbs="http://www.gbs.com/xcel"
+         readonly="true">
+   <xp:this.pageTitle>#{javascript:/*@ConvertedForumla*/form_windowtitle() ;}</xp:this.pageTitle>
+   <xp:this.resources>
+      <xp:script src="/xcel_ssjs_utilities.jss" clientSide="false"/>
+      <xp:script src="/xcel_ssjs_common.jss" clientSide="false"/>
+      <xp:script src="/xcel_ElementNameMap.jss" clientSide="false"/>
+      <xp:script src="/form_ticket_body.jss" clientSide="false"/>
+      <xp:script src="/ccform_ticket_actionbar.jss" clientSide="false"/>
+      <xp:script src="/xcel_SharedActions.jss" clientSide="false"/>
+   </xp:this.resources>
+   <xp:this.data>
+      <xp:dominoDocument var="data" formName="ticket"/>
+   </xp:this.data>
+   <xc:xcel_cc_layout configuration="#{javascript:themeFunctions.getLayoutConfiguration();}">
+      <xp:this.facets>
+         <xp:panel xp:key="headline">
+            <xc:xcel_cc_commonHeader/>
+         </xp:panel>
+         <xp:panel xp:key="navigation">
+            <xc:xcel_navigator/>
+         </xp:panel>
+         <xp:panel xp:key="content">
+            <xc:xcel_cc_form>
+               <xp:this.facets>
+                  <xp:panel xp:key="top"/>
+                  <xp:panel xp:key="center">
+                     <xc:xcel_cc_formLayoutSection>
+                        <xp:this.facets>
+                           <xp:panel xp:key="top"/>
+                           <xp:panel xp:key="center">
+                              <xp:messages/><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                              <xp:text id="field_Requestor">
+                                 <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_Requestor_defaultvalue(); 
+							if(value) data.setValue("Requestor",value);
+							return value;
+							}]]></xp:this.value>
+                              </xp:text>
+                              <xp:message for="field_Requestor"/>
+                              <xp:text id="field_Status">
+                                 <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_Status_defaultvalue(); 
+							if(value) data.setValue("Status",value);
+							return value;
+							}]]></xp:this.value>
+                              </xp:text>
+                              <xp:message for="field_Status"/>
+                              <br/></xp:panel><xp:table>
+                                 <xp:tr>
+                                    <xp:td>Trouble Ticket</xp:td>
+                                 </xp:tr>
+                              </xp:table>
+                              <xp:table>
+                                 <xp:tr>
+                                    <xp:td>Problem Summary*</xp:td>
+                                    <xp:td>
+                                       <xp:inputText id="field_Summary" styleClass="standard" value="#{data['Summary']}"/>
+                                       <xp:message for="field_Summary"/>
+                                    </xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td>Category*</xp:td>
+                                    <xp:td>
+                                       <xp:inputText id="field_Category"
+                                                     themeId="pickerElement"
+                                                     value="#{data['Category']}"/>
+                                       <xe:valuePicker id="field_Category_valuePicker" for="field_Category">
+                                          <xe:this.dataProvider>
+                                             <xe:simpleValuePicker valueList="#{javascript: /*@ConvertedForumla*/ keywords_1_keywords()}"
+                                                                   valueListSeparator=","/>
+                                          </xe:this.dataProvider>
+                                       </xe:valuePicker>
+                                       <xp:message for="field_Category"/>
+                                    </xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td>Priority*</xp:td>
+                                    <xp:td>
+                                       <xp:radioGroup id="field_Priority"
+                                                      styleClass="radioGroup"
+                                                      value="#{data['Priority']}">
+                                          <xp:selectItem itemLabel="High"/>
+                                          <xp:selectItem itemLabel="Medium"/>
+                                          <xp:selectItem itemLabel="Low"/>
+                                       </xp:radioGroup>
+                                       <xp:message for="field_Priority"/>
+                                    </xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td>Requester</xp:td>
+                                    <xp:td>
+                                       <xp:text id="computedtext_1"
+                                                value="#{javascript: /*@ConvertedForumla*/ computedtext_1_value()}"/>
+                                    </xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td>Status</xp:td>
+                                    <xp:td>
+                                       <xp:text id="computedtext_2"
+                                                value="#{javascript: /*@ConvertedForumla*/ computedtext_2_value()}"/>
+                                    </xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:if (pardef_6_hidewhen()) return false;return true;}]]></xp:this.rendered>Ticket ID</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:if (pardef_7_hidewhen()) return false;return true;}]]></xp:this.rendered>
+                                       <xp:text id="field_ID">
+                                          <xp:this.value><![CDATA[#{javascript: /*@ConvertedForumla*/
+							var value =field_ID_defaultvalue(); 
+							if(value) data.setValue("ID",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_ID"/></xp:panel></xp:td>
+                                 </xp:tr>
+                              </xp:table>
+                              <xp:table>
+                                 <xp:tr>
+                                    <xp:td>Problem Details</xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td>
+                                       <xp:inputRichText id="field_Details" style="width:100%;" value="#{data['Details']}"/>
+                                       <xp:message for="field_Details"/>
+                                    </xp:td>
+                                 </xp:tr>
+                              </xp:table>
+                              <xp:table>
+                                 <xp:tr>
+                                    <xp:td>History</xp:td>
+                                 </xp:tr>
+                              </xp:table>
+                              <xp:inputRichText id="field_History"
+                                                readonly="true"
+                                                style="width:100%;"
+                                                value="#{data['History']}"/>
+                              <xp:message for="field_History"/><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                              <br/></xp:panel><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Debugging:<br/></xp:panel><xp:table>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Assigned To:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_AssignedTo">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_AssignedTo_defaultvalue(); 
+							if(value) data.setValue("AssignedTo",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_AssignedTo"/></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Submitted:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_Submitted">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/ var value =field_Submitted_defaultvalue(); if(value) data.setValue("Submitted",value);
+									return value;}]]></xp:this.value>
+                                          <xp:this.converter>
+                                             <xp:convertDateTime type="both" pattern="MM/dd/yyyy"/>
+                                          </xp:this.converter>
+                                       </xp:text>
+                                       <xp:message for="field_Submitted"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Assigned:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_Assigned">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/ var value =field_Assigned_defaultvalue(); if(value) data.setValue("Assigned",value);
+									return value;}]]></xp:this.value>
+                                          <xp:this.converter>
+                                             <xp:convertDateTime type="both" pattern="MM/dd/yyyy"/>
+                                          </xp:this.converter>
+                                       </xp:text>
+                                       <xp:message for="field_Assigned"/></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Submitted By:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_SubmittedBy">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_SubmittedBy_defaultvalue(); 
+							if(value) data.setValue("SubmittedBy",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_SubmittedBy"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Assigned By:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_AssignedBy">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_AssignedBy_defaultvalue(); 
+							if(value) data.setValue("AssignedBy",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_AssignedBy"/></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Closed:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_Closed">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/ var value =field_Closed_defaultvalue(); if(value) data.setValue("Closed",value);
+									return value;}]]></xp:this.value>
+                                          <xp:this.converter>
+                                             <xp:convertDateTime type="both" pattern="MM/dd/yyyy"/>
+                                          </xp:this.converter>
+                                       </xp:text>
+                                       <xp:message for="field_Closed"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Resolution:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_Resolution">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_Resolution_defaultvalue(); 
+							if(value) data.setValue("Resolution",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_Resolution"/></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Closed By:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_ClosedBy">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_ClosedBy_defaultvalue(); 
+							if(value) data.setValue("ClosedBy",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_ClosedBy"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Created:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_Created">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/ var value =field_Created_defaultvalue(); if(value) data.setValue("Created",value);
+									return value;}]]></xp:this.value>
+                                          <xp:this.converter>
+                                             <xp:convertDateTime type="both" pattern="MM/dd/yyyy"/>
+                                          </xp:this.converter>
+                                       </xp:text>
+                                       <xp:message for="field_Created"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Last Updated:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_Updated">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/ var value =field_Updated_defaultvalue(); if(value) data.setValue("Updated",value);
+									return value;}]]></xp:this.value>
+                                          <xp:this.converter>
+                                             <xp:convertDateTime type="both" pattern="MM/dd/yyyy"/>
+                                          </xp:this.converter>
+                                       </xp:text>
+                                       <xp:message for="field_Updated"/></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Created By:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_CreatedBy">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_CreatedBy_defaultvalue(); 
+							if(value) data.setValue("CreatedBy",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_CreatedBy"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Last Updated By:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_UpdatedBy">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_UpdatedBy_defaultvalue(); 
+							if(value) data.setValue("UpdatedBy",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_UpdatedBy"/></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Last Activity:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_LastActivity">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_LastActivity_defaultvalue(); 
+							if(value) data.setValue("LastActivity",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_LastActivity"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Last Activity Date:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_LastActivityDate">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/ var value =field_LastActivityDate_defaultvalue(); if(value) data.setValue("LastActivityDate",value);
+									return value;}]]></xp:this.value>
+                                          <xp:this.converter>
+                                             <xp:convertDateTime type="both" pattern="MM/dd/yyyy"/>
+                                          </xp:this.converter>
+                                       </xp:text>
+                                       <xp:message for="field_LastActivityDate"/></xp:panel></xp:td>
+                                 </xp:tr>
+                                 <xp:tr>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>Last Activity By:</xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered>
+                                       <xp:text id="field_LastActivityBy">
+                                          <xp:this.value><![CDATA[${javascript: /*@ConvertedForumla*/
+							var value =field_LastActivityBy_defaultvalue(); 
+							if(value) data.setValue("LastActivityBy",value);
+							return value;
+							}]]></xp:this.value>
+                                       </xp:text>
+                                       <xp:message for="field_LastActivityBy"/></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                    <xp:td><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:td>
+                                 </xp:tr>
+                              </xp:table><xp:panel tagName="span"><xp:this.rendered><![CDATA[#{javascript:return false;]]></xp:this.rendered></xp:panel></xp:panel>
+                        </xp:this.facets>
+                     </xc:xcel_cc_formLayoutSection>
+                  </xp:panel>
+               </xp:this.facets>
+            </xc:xcel_cc_form>
+         </xp:panel>
+         <xp:panel xp:key="preview"/>
+         <xp:panel xp:key="legal">
+            <xc:xcel_cc_commonFooter/>
+         </xp:panel>
+      </xp:this.facets>
+   </xc:xcel_cc_layout>
+</xp:view>

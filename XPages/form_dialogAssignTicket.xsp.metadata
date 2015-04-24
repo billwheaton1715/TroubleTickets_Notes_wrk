@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="436" sequence="6" unid="17A02C05160EA43785257E26006D3B64">
+<created><datetime dst="true">20150413T155306,28-04</datetime></created>
+<modified><datetime dst="true">20150424T123420,10-04</datetime></modified>
+<revised><datetime dst="true">20150413T155312,97-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123420,09-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123420,09-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>form_dialogAssignTicket.xsp</text></item>
+<item name="$Comment" sign="true"><text>Xcelerator. Form: dialogAssignTicket</text></item>
+
+<item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
+
+</note>

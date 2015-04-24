@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+	<faces-config-extension>
+		<namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+		<default-prefix>xc</default-prefix>
+	</faces-config-extension>
+	<composite-component>
+		<display-name>Actionbar: managerAnnouncements</display-name>
+		<component-type>ccview_managerAnnouncements_actionbar</component-type>
+		<composite-name>ccview_managerAnnouncements_actionbar</composite-name>
+		<composite-file>/ccview_managerAnnouncements_actionbar.xsp</composite-file>
+		<composite-extension>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>Xcelerator Actionbar</category>
+			</designer-extension>
+		</composite-extension>
+		<description>Xcelerator. ActionBar: managerAnnouncements</description>
+		<icon>
+		<small-icon>icons/customcontrols/actionbar.gif</small-icon>
+		<large-icon>icons/customcontrols/actionbar.gif</large-icon>
+		</icon>
+	</composite-component>
+</faces-config>

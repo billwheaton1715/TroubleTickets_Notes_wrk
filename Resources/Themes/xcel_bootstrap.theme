@@ -1,0 +1,444 @@
+<theme
+	extends="bootstrapv2.3.2r"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+
+	<resources>
+		<styleSheet href="/xcel_bootstrap_helper.css" />
+		<script src="BootstrapNavigator.js" clientSide="true" />
+		<metaData>
+			<name>viewport</name>
+			<content>width=device-width, initial-scale=1.0</content>
+		</metaData>
+	</resources>
+
+	<control override="false">
+		<name>ViewRoot</name>
+		<property>
+			<name>pageTitle</name>
+			<value>#{javascript:@DbTitle()}</value>
+		</property>
+		<property mode="concat">
+			<name>styleClass</name>
+			<value>bootstrapPadding</value>
+		</property>	
+	</control>
+	
+	
+	<control>
+		<name>navCollapseButton</name>		
+		<property>
+			<name>styleClass</name>
+			<value>btn btn-navbar collapsed mobileButton</value>
+		</property>
+		<property>
+			<name>attrs</name>
+			<complex type="xp_attr">
+				<property>
+					<name>name</name>
+					<value>data-toggle</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>collapse</value>
+				</property>
+			</complex>
+			<complex type="xp_attr">
+				<property>
+					<name>name</name>
+					<value>data-target</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>.nav-collapse</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+	
+	<control>
+		<name>showInBootstrap3Nav</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>headerNavRight</name>
+		<property mode="override">
+			<name>tagName</name>
+			<value>div</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>collapse navbar-collapse navbarCollapse</value>
+		</property>	
+		<property>
+			<name>style</name>
+			<value>float:right;</value>
+		</property>	
+		<property mode="override">
+			<name>id</name>
+			<value>bs-example-navbar-collapse-1</value>
+		</property>		
+	</control>
+	<!-- Header Navigator -->
+	
+	<control>
+		<name>headerNav</name>
+		<property mode="override">
+			<name>tagName</name>
+			<value>div</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>navbar navbar-default navbar-fixed-top</value>
+		</property>	
+		<property>
+			<name>role</name>
+			<value>navigation</value>
+		</property>		
+	</control>
+	
+	
+	<control>
+		<name>layout.heading.title.content</name>		
+		<property>
+			<name>styleClass</name>
+			<value>brand</value>
+		</property>	
+		<property>
+			<name>style</name>
+			<value>margin-left:15px;</value>
+		</property>		
+	</control>
+	
+	<!-- END Header Navigator -->
+	<control>
+		<name>layout.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>container-fluid</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.content.top.row</name>
+		<property>
+			<name>styleClass</name>
+			<value>row-fluid</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.content.row</name>
+		<property>
+			<name>styleClass</name>
+			<value>row-fluid</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.top.content</name>
+		<property>
+			<name>styleClass</name>
+			<value>span12</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.leading.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>span2</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.center.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>span10</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.trailing.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.bottom.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>span12</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.navigation.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>sidebar-nav</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.navigation.content.navigator</name>
+		<property>
+			<name>styleClass</name>
+			<value>nav nav-list</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.actionBar.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn-toolbar</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.actionBar.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>actionBarGroup</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn-group</value>
+		</property>
+	</control>
+
+	<control>
+		<name>Button.Command</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn</value>
+		</property>
+	</control>
+
+	<control>
+		<name>Form</name>
+		<property>
+			<name>styleClass</name>
+			<value>form-horizontal</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.heading.container</name>
+		<property>
+			<name>tagName</name>
+			<value>div</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>hero-unit</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.heading.title.container</name>
+		<property>
+			<name>tagName</name>
+			<value>h1</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>header</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.heading.subtitle.container</name>
+		<property>
+			<name>tagName</name>
+			<value>h3</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>subheader</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>layoutForm</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.view.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>layoutView</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.section.container</name>
+		<property>
+			<name>tagName</name>
+			<value>fieldset</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.section.content.top.container</name>
+		<property>
+			<name>tagName</name>
+			<value>legend</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.section.heading</name>
+		<property>
+			<name>tagName</name>
+			<value>h4</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.section.subheading</name>
+		<property>
+			<name>tagName</name>
+			<value>h5</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.grid.container</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.grid.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+		
+	<control>
+		<name>form.grid.header.container</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.grid.row.container</name>
+		<property>
+			<name>styleClass</name>
+			<value>row</value>
+		</property>
+		<property>
+			<name>style</name>
+			<value>margin-left:0px;</value>
+		</property>
+	</control>
+		
+	<control>
+		<name>layout.form.grid.row.content</name>
+		<property>
+			<name>tagName</name>
+			<value>div</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>control-group</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.grid.row.column.label</name>
+		<property>
+			<name>tagName</name>
+			<value>label</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>control-label</value>
+		</property>
+		<property>
+			<name>style</name>
+			<value>text-align:left;</value>
+		</property>
+	</control>
+		
+	<control>
+		<name>layout.form.grid.row.column.text</name>
+		<property>
+			<name>tagName</name>
+			<value>div</value>
+		</property>
+<!--		<property>-->
+<!--			<name>styleClass</name>-->
+<!--			<value>controls</value>-->
+<!--		</property>-->
+	</control>	
+		
+	<control>
+		<name>layout.form.grid.row.column.control</name>
+		<property>
+			<name>tagName</name>
+			<value>div</value>
+		</property>
+<!--		<property>-->
+<!--			<name>styleClass</name>-->
+<!--			<value>controls</value>-->
+<!--		</property>-->
+	</control>
+	
+	<control>
+		<name>layout.form.grid.row.column.rtcontrol</name>
+		<property>
+			<name>tagName</name>
+			<value>div</value>
+		</property>
+<!--		<property>-->
+<!--			<name>styleClass</name>-->
+<!--			<value>controls</value>-->
+<!--		</property>-->
+	</control>
+	
+	<control>
+		<name>layout.form.grid.row.column.message</name>
+		<property>
+			<name>tagName</name>
+			<value>span</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>xspMessageContainer</value>
+		</property>
+	</control>
+	
+	<control>
+	  <name>InputField.EditBox</name>
+	  <property mode="concat">
+	    <name>styleClass</name>
+	    <value>form-control</value>
+	  </property>
+	</control>
+	
+
+	
+</theme>

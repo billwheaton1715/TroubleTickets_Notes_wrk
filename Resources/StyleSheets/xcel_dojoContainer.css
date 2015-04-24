@@ -1,0 +1,76 @@
+
+/* Overriding Chrome Focus Outline */
+*:focus {
+    outline: 0;
+}
+
+/* General Styling */
+html,
+body,
+body > form {
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+div[dojotype="dijit.layout.BorderContainer"] {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+div[role="toolbar"] > span.dijitButton,
+div[role="toolbar"] > span.dijitButton > span.dijitButtonNode > span.dijitButtonContents > span.dijitButtonText,
+div[role="toolbar"] > span.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > span.dijitButtonText,
+div[role="toolbar"] > span.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > span.dijitButtonText > span  {
+
+}
+div.heading > h1.header {
+	font-size: 16pt;
+	color: #666;
+}
+div.heading > h2.subheader {
+	font-size: 14pt;
+	font-weight: normal;
+	margin: 0px 0px 10px 0px;
+	color: #999;
+}
+div.heading > div.info {
+	font-size: 12pt;
+	color: #666;
+}
+fieldset.section {
+	margin: 10px;
+}
+fieldset.section > legend {
+	font-weight: bold;
+	color: #666;
+	font-size: 1.35em;
+}
+.formRow {
+	padding: 4px;
+}
+table.formGrid > tbody.formGridBody > tr > td.label {
+	width: 150px;
+	vertical-align: top;
+}
+table.formGrid > tbody.formGridBody > tr > td.label > span.xspTextLabel,
+table.formGrid > tbody.formGridBody > tr > td.label > label {
+	font-weight: bold;
+	color: #666;
+}
+.lotusui30dojo .dijitSplitContainer-dijitContentPane, .lotusui30dojo .dijitBorderContainer-dijitContentPane,
+.lotusui30dojo .dijitContentPane {
+	padding: 0px !important;
+}
+div[dojotype="dijit.layout.BorderContainer"].layoutForm > div[dojotype="dijit.layout.ContentPane"][region="center"] {
+	padding: 10px !important;
+	overflow: auto;
+}
+
+.lotusui30dojo .dijitBorderContainer {
+	border: none !important;
+}
+
+

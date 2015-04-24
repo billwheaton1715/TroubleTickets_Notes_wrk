@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>xcel_cc_formGridRow</component-type>
+    <composite-name>xcel_cc_formGridRow</composite-name>
+    <composite-file>/xcel_cc_formGridRow.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xd;
+&lt;xp:view&#xd;
+	xmlns:xp="http://www.ibm.com/xsp/core"&gt;&#xd;
+&#xd;
+&lt;xp:table style="border-collapse: collapse; border: 1px solid #ccc; width:100%;"&gt;&#xd;
+	&lt;xp:tr&gt;&#xd;
+		&lt;xp:td colspan="3" style="background-color: #C3D9FF;"&gt;&#xd;
+&lt;h2&gt;Form Row Control&lt;/h2&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+	&lt;/xp:tr&gt;&#xd;
+	&lt;xp:tr&gt;&#xd;
+		&lt;xp:td colspan="3" style="background-color: #fff;"&gt;&#xd;
+&lt;xp:callback&#xd;
+	facetName="center" /&gt;&#xd;
+		&lt;/xp:td&gt;&#xd;
+	&lt;/xp:tr&gt;&#xd;
+&lt;/xp:table&gt;&#xd;
+&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+    <property-type>
+      <property-name>configuration</property-name>
+      <property>
+        <property-name>rowContainer</property-name>
+        <property-class>string</property-class>
+        <display-name>rowContainer</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+          </designer-extension>
+        </property-extension>
+      </property>
+      <display-name>configuration</display-name>
+      <property>
+        <property-name>rowContent</property-name>
+        <property-class>string</property-class>
+        <display-name>rowContent</display-name>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.std.String</editor>
+          </designer-extension>
+        </property-extension>
+      </property>
+    </property-type>
+  </composite-component>
+</faces-config>

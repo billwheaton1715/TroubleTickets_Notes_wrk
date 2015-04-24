@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel
+		themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','layoutContainer');}">
+		<xp:panel
+			themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','layoutContent');}">
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','topContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','topContent');}">
+					<xp:callback
+						facetName="top" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','leadingContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','leadingContent');}">
+					<xp:callback
+						facetName="leading" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','centerContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','centerContent');}">
+					<xp:callback
+						facetName="center" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','trailingContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','trailingContent');}">
+					<xp:callback
+						facetName="trailing" />
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','bottomContainer');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_form','bottomContent');}">
+					<xp:callback
+						facetName="bottom" />
+				</xp:panel>
+			</xp:panel>
+		</xp:panel>
+	</xp:panel>
+
+</xp:view>

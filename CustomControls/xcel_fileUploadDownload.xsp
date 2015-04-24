@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">	
+	<!-- 
+	Provide the dataSource name and the field name for binding like in the commented example below
+	<xc:xcel_fileUploadDownload dataSource="#{javascript:return data;}" field="richTextSampleField"></xc:xcel_fileUploadDownload>
+	 -->
+	<xp:div rendered="#{javascript: return currentDocument.isEditable();}">
+		<xp:fileUpload id="fileUpload1" value="#{compositeData.dataSource[compositeData.field]}">
+			<xp:eventHandler event="onchange" submit="true" refreshMode="complete"></xp:eventHandler>	
+		</xp:fileUpload>
+	</xp:div>
+	<xp:fileDownload rows="30" id="fileDownload1"
+		displayLastModified="true" hideWhen="true" allowDelete="true" value="#{compositeData.dataSource[compositeData.field]}">
+	</xp:fileDownload>
+</xp:view>

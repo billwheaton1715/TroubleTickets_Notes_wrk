@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+         xmlns:xc="http://www.ibm.com/xsp/custom"
+         xmlns:xe="http://www.ibm.com/xsp/coreex"
+         xmlns:gbs="http://www.gbs.com/xcel">
+   <xp:this.pageTitle/>
+   <xp:this.resources>
+      <xp:script src="/xcel_ElementNameMap.jss" clientSide="false"/>
+      <xp:script src="/page_employeeMyClosedTickets_body.jss" clientSide="false"/>
+      <xp:script src="/ccpage_employeeMyClosedTickets_actionbar.jss" clientSide="false"/>
+      <xp:script src="/xcel_SharedActions.jss" clientSide="false"/>
+   </xp:this.resources>
+   <xp:this.data>
+      <xp:dominoDocument var="data" formName="employeeMyClosedTickets"/>
+   </xp:this.data>
+   <xc:xcel_cc_layout configuration="#{javascript:themeFunctions.getLayoutConfiguration();}">
+      <xp:this.facets>
+         <xp:panel xp:key="headline">
+            <xc:xcel_cc_commonHeader/>
+         </xp:panel>
+         <xp:panel xp:key="navigation">
+            <xc:xcel_navigator/>
+         </xp:panel>
+         <xp:panel xp:key="content">
+            <xc:xcel_cc_form>
+               <xp:this.facets>
+                  <xp:panel xp:key="top"><xc:ccpage_employeeMyClosedTickets_actionbar/></xp:panel>
+                  <xp:panel xp:key="center">
+                     <xc:xcel_cc_formLayoutSection>
+                        <xp:this.facets>
+                           <xp:panel xp:key="top"/>
+                           <xp:panel xp:key="center">
+                              <xp:include id="embeddedview_1">
+                                 <xp:this.rendered><![CDATA[${javascript:viewScope.put("embeddedview_1",embeddedview_1_showsinglecategory()); return true}			
+					]]></xp:this.rendered>
+                                 <xp:this.pageName><![CDATA[${javascript:return getConvertedElement("view","employeeMyClosedTickets")+".xsp";}]]></xp:this.pageName>
+                              </xp:include>
+                           </xp:panel>
+                        </xp:this.facets>
+                     </xc:xcel_cc_formLayoutSection>
+                  </xp:panel>
+               </xp:this.facets>
+            </xc:xcel_cc_form>
+         </xp:panel>
+         <xp:panel xp:key="preview"/>
+         <xp:panel xp:key="legal">
+            <xc:xcel_cc_commonFooter/>
+         </xp:panel>
+      </xp:this.facets>
+   </xc:xcel_cc_layout>
+</xp:view>

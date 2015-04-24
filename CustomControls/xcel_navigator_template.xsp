@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<style>
+	.nav-header {font-size:12pt;font-weight:bold;}
+	</style>
+	<xp:panel themeId="layout.navigation.container">
+		<xe:navigator themeId="layout.navigation.content.navigator">
+			<xe:this.treeNodes>
+				<xe:basicLeafNode styleClass="nav-header" >
+					<xe:this.label><![CDATA[#{javascript:return "HOMELINK";}]]></xe:this.label>
+					<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return "#"}]]></xe:this.href>
+				</xe:basicLeafNode>
+				<xe:repeatTreeNode var="val">
+					<xe:this.children>
+						<xe:basicLeafNode>
+							<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+							<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+						</xe:basicLeafNode>
+					</xe:this.children>
+					<xe:this.value><![CDATA[#{javascript:
+					if (sessionScope.homeLinks != null){
+				 		return sessionScope.homeLinks;
+				 	}
+				 	var allArray = new Array();				
+				 	allArray.push(["Link1","#"]);		 					 	
+					sessionScope.homeLinks = allArray;
+					return sessionScope.homeLinks;
+					}]]></xe:this.value>
+				</xe:repeatTreeNode>
+				<xe:separatorTreeNode styleClass="divider"></xe:separatorTreeNode>
+				<xe:basicLeafNode styleClass="nav-header">
+					<xe:this.label><![CDATA[#{javascript:return "HEADER1";}]]></xe:this.label>
+					<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return "#"}]]></xe:this.href>
+				</xe:basicLeafNode>
+				<xe:repeatTreeNode var="val">
+					<xe:this.children>
+						<xe:basicLeafNode>
+							<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+							<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+						</xe:basicLeafNode>
+					</xe:this.children>
+					<xe:this.value><![CDATA[#{javascript:
+					if (sessionScope.header1Links != null){
+				 		return sessionScope.header1Links;
+				 	}
+				 	var allArray = new Array();				 	
+			 		allArray.push(["Link1","#"]);
+			 		allArray.push(["Link2","#"]);
+					sessionScope.header1Links = allArray;
+					return sessionScope.header1Links;
+				}]]>
+					</xe:this.value>
+				</xe:repeatTreeNode>
+				<xe:separatorTreeNode styleClass="divider"></xe:separatorTreeNode>
+				<xe:basicLeafNode styleClass="nav-header">
+					<xe:this.label><![CDATA[#{javascript:return "HEADER2";}]]></xe:this.label>
+					<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return "#"}]]></xe:this.href>
+				</xe:basicLeafNode>
+				<xe:repeatTreeNode var="val">
+					<xe:this.children>
+						<xe:basicLeafNode>
+							<xe:this.label><![CDATA[#{javascript:return val[0]}]]></xe:this.label>
+							<xe:this.href><![CDATA[#{javascript:viewStateBean.restoreState = true;return val[1]}]]></xe:this.href>
+						</xe:basicLeafNode>
+					</xe:this.children>
+					<xe:this.value><![CDATA[#{javascript:
+					if (sessionScope.header2Links != null){
+				 		return sessionScope.header2Links;
+				 	}
+				 	var allArray = new Array();				 	
+			 		allArray.push(["Link1","#"]);
+			 		allArray.push(["Link2","#"]);
+					sessionScope.header2Links = allArray;
+					return sessionScope.header2Links;
+					}]]></xe:this.value>
+				</xe:repeatTreeNode>
+			</xe:this.treeNodes>
+		</xe:navigator>
+	</xp:panel>
+	<br />
+	<br />
+	<br />
+	<br />
+
+</xp:view>

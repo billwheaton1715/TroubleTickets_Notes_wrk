@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.resources>
+		<xp:script
+			src="/xcel_ssjs_utilities.jss"
+			clientSide="false">
+		</xp:script>
+		<xp:script
+			src="/xcel_ssjs_common.jss"
+			clientSide="false">
+		</xp:script>
+	</xp:this.resources>
+
+	<xp:panel
+		themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','layoutContainer');}">
+		<xp:panel
+			themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','layoutContent');}">
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','layoutRowTop');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','topContainer');}">
+					<xp:panel
+						themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','topContent');}">
+						<xp:callback
+							facetName="top" />
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','layoutRowMiddle');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','leadingContainer');}">
+					<xp:panel
+						themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','leadingContent');}">
+						<xp:callback
+							facetName="leading" />
+					</xp:panel>
+				</xp:panel>
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','centerContainer');}">
+					<xp:panel
+						themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','centerContent');}">
+						<xp:callback
+							facetName="center" />
+					</xp:panel>
+				</xp:panel>
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','trailingContainer');}">
+					<xp:panel
+						themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','trailingContent');}">
+						<xp:callback
+							facetName="trailing" />
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+			<xp:panel
+				themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','layoutRowBottom');}">
+				<xp:panel
+					themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','bottomContainer');}">
+					<xp:panel
+						themeId="${javascript: return themeFunctions.getThemeId('xcel_cc_layoutStructure','bottomContent');}">
+						<xp:callback
+							facetName="bottom" />
+					</xp:panel>
+				</xp:panel>
+			</xp:panel>
+		</xp:panel>
+	</xp:panel>
+
+</xp:view>

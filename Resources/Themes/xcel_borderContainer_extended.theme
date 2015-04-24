@@ -1,0 +1,240 @@
+
+<theme
+	extends="xcel_borderContainer"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+	
+	<resources>
+		<dojoModule
+			name="dojox.layout.ExpandoPane"></dojoModule>
+		<styleSheet
+			href="/.ibmxspres/dojoroot/dojox/layout/resources/ExpandoPane.css" />
+		<styleSheet
+			href="xcel_dojoContainer_expanded.css" />
+	</resources>
+
+	<control
+		override="true">
+		<name>layout.content.trailing.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.content.leading.container</name>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>leading</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>splitter</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>true</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.form.content.top.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>top</value>
+				</property>
+			</complex>
+		</property>
+		<property>
+			<name>style</name>
+			<value>z-index:100</value>
+		</property>		
+	</control>	
+	
+	<control override="true">
+		<name>layout.form.content.leading.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.form.content.trailing.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.form.content.bottom.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.content.bottom.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dojox.layout.ExpandoPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>bottom</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>splitter</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>false</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>startExpanded</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>false</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+	
+	
+	<control override="true">
+		<name>layout.heading.title.container</name>
+		<property>
+			<name>tagName</name>
+			<value>h1</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.heading.subtitle.container</name>
+		<property>
+			<name>tagName</name>
+			<value>h2</value>
+		</property>
+	</control>
+
+	<control override="true">
+		<name>layout.view.content.top.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>top</value>
+				</property>
+			</complex>
+		</property>
+		<property>
+			<name>style</name>
+			<value>z-index:100</value>
+		</property>		
+	</control>
+		
+	<control override="true">
+		<name>layout.view.content.leading.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.view.content.trailing.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.view.content.bottom.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.content.bottom.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control override="true">
+		<name>layout.content.bottom.content</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control>
+	  <name>ListBox</name>
+	  <property mode="concat">
+	    <name>styleClass</name>
+	    <value>standardListBox</value>
+	  </property>
+	</control>
+	
+
+</theme>

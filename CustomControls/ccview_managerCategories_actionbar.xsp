@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+         xmlns:xe="http://www.ibm.com/xsp/coreex"
+         xmlns:xc="http://www.ibm.com/xsp/custom">
+   <xp:inputHidden id="gridDetails" value=""/>
+   <xp:this.resources>
+      <xp:styleSheet href="/xcel_actionBar.css"/>
+      <xp:script src="/ccview_managerCategories_actionbar.jss" clientSide="false"/>
+      <xp:script src="/xcel_SharedActions.jss" clientSide="false"/>
+      <xp:script src="/xcel_csjs_ActionBarSupport.js" clientSide="true"/>
+      <xp:script src="/xcel_csjs_clientUtils.js" clientSide="true"/>
+   </xp:this.resources>
+   <xp:eventHandler event="onClientLoad" submit="false">
+      <xp:this.script><![CDATA[ 				  	
+					hideEmptyMenuItems();
+					checkWidthChanges();	  			
+ 		]]></xp:this.script>
+   </xp:eventHandler>
+   <xp:panel id="prtActionBar" styleClass="fullSize">
+      <div id="cssmenu"><xp:panel tagName="ul" id="topMenu"><xp:panel tagName="li"><xp:link id="action_New_Category">New Category<xp:eventHandler event="click" submit="true" refreshMode="partial">
+               <xp:this.action><![CDATA[
+						 #{javascript:
+						 /*@ConvertedFormula*/
+						 action_New_Category_click();}
+					]]></xp:this.action>
+               <xp:this.script><![CDATA[	
+									var gdetails = getGridDetails('#{id:dataViewer1}');
+									document.getElementById('#{id:gridDetails}').value = gdetails;
+							]]></xp:this.script>
+            </xp:eventHandler>
+         </xp:link></xp:panel></xp:panel></div>
+   </xp:panel>
+</xp:view>

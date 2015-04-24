@@ -1,0 +1,35 @@
+/*********************************************Error Component and Error Page Style START*******************************/
+
+.unsupportedComponent{
+	background-color:red;
+	width:300px;
+	height:50px;
+}
+.green{
+	background-color:#4dff62;
+	width:300px;
+	height:auto;
+}
+.yellow{
+	background-color:yellow;
+	width:300px;
+	height:auto;
+}
+.red{
+	background-color:red;
+	width:300px;
+	height:auto;
+}
+div.errorContainer{
+	margin:20px 50px;
+}
+.errorContainer h1{
+	font: bold 2.5em Times New Roman;
+	margin: 0.75em 0em;
+}
+.errorContainer p{
+	font-family: Times New Roman;
+	margin: 0.9em 0em;
+	font-size: 1.5em;
+}
+/*********************************************Error Component and Error Page Style END*********************************/

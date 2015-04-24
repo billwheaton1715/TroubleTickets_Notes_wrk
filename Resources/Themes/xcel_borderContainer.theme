@@ -1,0 +1,909 @@
+<theme
+	extends="oneuiv2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+
+	<resources>
+		<styleSheet
+			href="xcel_dojoContainer.css" />
+		<dojoModule
+			name="dijit.layout.ContentPane"></dojoModule>
+		<dojoModule
+			name="dijit.layout.BorderContainer"></dojoModule>
+		<dojoModule
+			name="dijit.Toolbar"></dojoModule>
+		<dojoModule
+			name="dijit.ToolbarSeparator"></dojoModule>
+		<dojoModule
+			name="dijit.DropDownMenu"></dojoModule>
+		<dojoModule
+			name="dijit.MenuItem"></dojoModule>
+		<dojoModule
+			name="dijit.MenuSeparator"></dojoModule>
+		<dojoModule
+			name="dijit.TooltipDialog"></dojoModule>
+		<dojoModule
+			name="dijit.form.Button"></dojoModule>
+		<dojoModule
+			name="dijit.form.ToggleButton"></dojoModule>
+		<dojoModule
+			name="dijit.form.DropDownButton"></dojoModule>
+		<dojoModule
+			name="dijit.form.ComboBox"></dojoModule>
+		<styleSheet
+			href="/xcel_header.css" />	
+	</resources>
+	
+	
+
+	<control override="true">
+		<name>layout.heading.title.content</name>
+		<property>
+			<name>tagName</name>
+			<value>H1</value>
+		</property>	
+		<property>
+			<name>style</name>
+			<value>float:left; padding:10px;</value>
+		</property>	
+	</control>
+
+	<control override="true">
+		<name>navCollapseButton</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>		
+	</control>
+
+	<control
+		override="true">
+		<name>layout.content.trailing.container</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+	
+	<control
+		override="true">
+		<name>showInBootstrap3Nav</name>
+		<property>
+			<name>rendered</name>
+			<value>#{javascript:return false;}</value>
+		</property>
+	</control>
+
+
+
+	<control>
+		<name>ViewRoot</name>
+		<property>
+			<name>pageTitle</name>
+			<value>#{javascript:@DbTitle()}</value>
+		</property>
+		<property>
+			<name>dojoTheme</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+		<property>
+			<name>dojoParseOnLoad</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.BorderContainer</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>design</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>headline</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>gutters</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>true</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>liveSplitters</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>true</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.top.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>top</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.top.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.leading.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+			<property>
+			<name>style</name>
+			<value>overflow-y:auto;width:15%;</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>leading</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.leading.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.center.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>center</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.center.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.trailing.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>trailing</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.trailing.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.bottom.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>bottom</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.content.bottom.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.BorderContainer</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>layoutForm</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>design</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>headline</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>gutters</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>true</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>liveSplitters</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>true</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.top.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>top</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.top.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.leading.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>leading</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.leading.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.center.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>center</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.center.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.trailing.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>trailing</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.trailing.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.bottom.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>bottom</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.content.bottom.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.section.container</name>
+		<property>
+			<name>tagName</name>
+			<value>fieldset</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.section.content.top.container</name>
+		<property>
+			<name>tagName</name>
+			<value>legend</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.section.heading</name>
+		<property>
+			<name>tagName</name>
+			<value>h2</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.section.subheading</name>
+		<property>
+			<name>tagName</name>
+			<value>h3</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.container</name>
+		<property>
+			<name>tagName</name>
+			<value>table</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.content.top.container</name>
+		<property>
+			<name>tagName</name>
+			<value>thead</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.content.top.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.content.center.container</name>
+		<property>
+			<name>tagName</name>
+			<value>tbody</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.content.center.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.content.botttom.container</name>
+		<property>
+			<name>tagName</name>
+			<value>tfoot</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.content.bottom.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.row.container</name>
+		<property>
+			<name>tagName</name>
+			<value>tr</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.row.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.row.column.container</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.row.column.content</name>
+		<property>
+			<name>tagName</name>
+			<value>td</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.row.column.label</name>
+		<property>
+			<name>tagName</name>
+			<value>td</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>label</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.grid.row.column.text</name>
+		<property>
+			<name>tagName</name>
+			<value>td</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>control</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.row.column.control</name>
+		<property>
+			<name>tagName</name>
+			<value>td</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>control</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>layout.form.grid.row.column.rtcontrol</name>
+		<property>
+			<name>tagName</name>
+			<value>td</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>control</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.form.grid.row.column.message</name>
+		<property>
+			<name>tagName</name>
+			<value>td</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>message</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.BorderContainer</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>layoutForm</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>design</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>headline</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>gutters</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>true</value>
+				</property>
+			</complex>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>liveSplitters</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>true</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.top.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>top</value>
+				</property>
+			</complex>
+		</property>	
+	</control>
+
+	<control>
+		<name>layout.view.content.top.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.leading.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>leading</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.leading.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.center.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>center</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.center.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.trailing.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>trailing</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.trailing.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.bottom.container</name>
+		<property>
+			<name>dojoType</name>
+			<value>dijit.layout.ContentPane</value>
+		</property>
+		<property>
+			<name>dojoAttributes</name>
+			<complex
+				type="xp_dojoAttribute">
+				<property>
+					<name>name</name>
+					<value>region</value>
+				</property>
+				<property>
+					<name>value</name>
+					<value>bottom</value>
+				</property>
+			</complex>
+		</property>
+	</control>
+
+	<control>
+		<name>layout.view.content.bottom.content</name>
+		<property>
+			<name>disableOutputTag</name>
+			<value>#{javascript:return true;}</value>
+		</property>
+	</control>
+<!-- Commented out as dijit styled comboboxes do nto fire events in border container layout
+	<control name="ComboBox">
+		<name>ComboBox</name>
+		<property mode="override">		
+			<name>dojoType</name>
+			<value>dijit.form.ComboBox</value>
+		</property>		
+	</control>
+-->	
+</theme>

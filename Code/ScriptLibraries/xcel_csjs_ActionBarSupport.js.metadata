@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2e2" sequence="4" unid="415AB5A72A37710B85257E26006D3AA4">
+<created><datetime dst="true">20150413T155304,36-04</datetime></created>
+<modified><datetime dst="true">20150424T123418,40-04</datetime></modified>
+<revised><datetime dst="true">20150414T102636,02-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123418,39-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123418,39-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$TITLE" sign="true"><text>xcel_csjs_ActionBarSupport</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$Comment" sign="true"><text>Xcelerator. CSJS for Action Bar</text></item>
+<item name="$Flags"><text>34Qh5</text></item></note>

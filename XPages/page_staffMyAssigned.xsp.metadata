@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.3" replicaid="85257E31005B0726" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3f6" sequence="6" unid="E499A7E3D95224C685257E26006D3B3E">
+<created><datetime dst="true">20150413T155305,90-04</datetime></created>
+<modified><datetime dst="true">20150424T123419,78-04</datetime></modified>
+<revised><datetime dst="true">20150413T155312,33-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150424T123419,77-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150424T123419,77-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=William Wheaton/OU=NA/O=GBS</name></updatedby>
+<wassignedby><name>CN=William Wheaton/OU=NA/O=GBS</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE"><text>page_staffMyAssigned.xsp</text></item>
+<item name="$Comment" sign="true"><text>Xcelerator. Page: staffMyAssigned</text></item>
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+</note>
